@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "es6", "es2016"],
+    "target": "es6",
+    "resolveJsonModule": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
+    "strict": false,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "@controllers": ["./src/controller/v1/index"],
+      "@controllersV2": ["./src/controller/v2/index"],
+      "@services": ["./src/services/index"],
+      "@tdo": ["./src/tdo/index"],
+      "@validation": ["./src/middleware/validation/index"]
+    }
+  }
+}
