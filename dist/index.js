@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Entities = void 0;
 require("reflect-metadata");
-const plans_entity_1 = require("./src/entity/plans.entity");
+const plans_entity_1 = require("src/entity/plans.entity");
 const patient_agent_contact_entity_1 = require("src/entity/patient_agent_contact.entity");
 const plans_audit_entity_1 = require("src/entity/plans_audit.entity");
 const access_code_entity_1 = require("src/entity/access_code.entity");
