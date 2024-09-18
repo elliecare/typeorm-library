@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import {Plans} from 'src/entity/plans.entity';
+import {Plans} from './src/entity/plans.entity';
 import {PatientAgentContact} from 'src/entity/patient_agent_contact.entity'
 import {Plans_audit} from 'src/entity/plans_audit.entity'
 import {AccessCode} from 'src/entity/access_code.entity'
@@ -43,5 +43,6 @@ import {User_audit} from 'src/entity/user_audit.entity'
 import {UserOperationalRole} from 'src/entity/user_operational_role.entity'
 import {UserSmartwatch} from 'src/entity/user_smartwatch.entity'
 import {Users_smartwatches_audit} from 'src/entity/user_smartwatch_audit.entity'
+import {CompanyClient} from 'src/entity/company_client.entity'
 
-export const Entities = [InviteCode,Device,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,EllieCoins,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs, AppVersion]
+export const Entities = [CompanyClient,InviteCode,Device,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,EllieCoins,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs, AppVersion]
