@@ -1,9 +1,9 @@
 import "reflect-metadata";
-import {Plans} from 'src/entity/plans.entity';
-import {PatientAgentContact} from 'src/entity/patient_agent_contact.entity'
-import {Plans_audit} from 'src/entity/plans_audit.entity'
-import {AccessCode} from 'src/entity/access_code.entity'
-import {Alert} from 'src/entity/alert.entity'
+import {Plans} from './src/entity/plans.entity';
+import {PatientAgentContact} from './src/entity/patient_agent_contact.entity'
+import {Plans_audit} from './src/entity/plans_audit.entity'
+import {AccessCode} from './src/entity/access_code.entity'
+import {Alert} from './src/entity/alert.entity'
 import {AlertConfiguration} from 'src/entity/alert_configuration.entity'
 import {AlertLogs} from 'src/entity/alert_logs.entity'
 import {AppVersion} from 'src/entity/appversion.entity'
