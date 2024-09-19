@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Tracking = void 0;
 const typeorm_1 = require("typeorm");
-const types_1 = require("src/types");
+const types_1 = require("../types");
 const smartwatch_entity_1 = require("./smartwatch.entity");
 const company_client_entity_1 = require("./company_client.entity");
 let Tracking = class Tracking {

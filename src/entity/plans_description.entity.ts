@@ -1,4 +1,4 @@
-import { FreeTrial } from "src/types";
+import { FreeTrial } from "../types";
 import {
 	Column,
 	CreateDateColumn,
