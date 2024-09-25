@@ -7,7 +7,7 @@ import {
 	JoinColumn,
 } from "typeorm";
 import { Smartwatch } from "./smartwatch.entity";
-import { SmartwatchStatus } from "src/types";
+import { SmartwatchStatus } from "../types";
 import { User } from "./user.entity";
 
 @Entity()

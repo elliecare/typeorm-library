@@ -1,4 +1,4 @@
-import { EventsNotificationType, NotificationType } from "src/types";
+import { EventsNotificationType, NotificationType } from "../types";
 import {
 	Entity,
 	PrimaryGeneratedColumn,

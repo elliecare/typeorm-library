@@ -6,7 +6,7 @@ import {
 	JoinColumn,
 	PrimaryGeneratedColumn,
 } from "typeorm";
-import { TrackingStatus } from "src/types";
+import { TrackingStatus } from "../types";
 import { Smartwatch } from "./smartwatch.entity";
 import { Tracking } from "./tracking.entity";
 import { User } from "./user.entity";

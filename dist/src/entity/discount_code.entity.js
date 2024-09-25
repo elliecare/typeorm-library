@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DiscountCode = void 0;
-const types_1 = require("src/types");
+const types_1 = require("../types");
 const typeorm_1 = require("typeorm");
 let DiscountCode = class DiscountCode {
 };
