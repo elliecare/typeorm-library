@@ -1,5 +1,5 @@
 {
-  "name": "typeorm-library-prod",
+  "name": "typeorm-library",
   "version": "1.0.7",
   "description": "",
   "main": "dist/index.js",
