@@ -1,4 +1,4 @@
-import { DiscountCodeType } from "src/types";
+import { DiscountCodeType } from "../types";
 import {
 	Column,
 	CreateDateColumn,

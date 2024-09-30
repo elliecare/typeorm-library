@@ -9,49 +9,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DiscountCode = void 0;
-const types_1 = require("../types");
+exports.Steps = void 0;
 const typeorm_1 = require("typeorm");
-let DiscountCode = class DiscountCode {
+const appversion_entity_1 = require("./appversion.entity");
+let Steps = class Steps {
 };
-exports.DiscountCode = DiscountCode;
+exports.Steps = Steps;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
-], DiscountCode.prototype, "id", void 0);
+], Steps.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], DiscountCode.prototype, "code", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "enum",
-        enum: types_1.DiscountCodeType,
-        default: "percentage",
-    }),
-    __metadata("design:type", String)
-], DiscountCode.prototype, "discount_type", void 0);
+], Steps.prototype, "device_id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
-], DiscountCode.prototype, "discount_percentage", void 0);
+], Steps.prototype, "total", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: true }),
-    __metadata("design:type", Boolean)
-], DiscountCode.prototype, "is_active", void 0);
+    (0, typeorm_1.ManyToOne)(() => appversion_entity_1.AppVersion, { eager: true }),
+    (0, typeorm_1.JoinColumn)({ name: "app_version_id" }),
+    __metadata("design:type", appversion_entity_1.AppVersion)
+], Steps.prototype, "app_version", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Date)
+], Steps.prototype, "created_on_device", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], DiscountCode.prototype, "created_at", void 0);
-__decorate([
-    (0, typeorm_1.UpdateDateColumn)(),
-    __metadata("design:type", Date)
-], DiscountCode.prototype, "updated_at", void 0);
-__decorate([
-    (0, typeorm_1.DeleteDateColumn)(),
-    __metadata("design:type", Date)
-], DiscountCode.prototype, "deleted_at", void 0);
-exports.DiscountCode = DiscountCode = __decorate([
+], Steps.prototype, "created_at", void 0);
+exports.Steps = Steps = __decorate([
     (0, typeorm_1.Entity)()
-], DiscountCode);
-//# sourceMappingURL=discount_code.entity.js.map
+], Steps);
+//# sourceMappingURL=steps.entity.js.map

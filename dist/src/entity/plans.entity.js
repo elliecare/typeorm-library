@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Plans = void 0;
 const typeorm_1 = require("typeorm");
 const company_client_entity_1 = require("./company_client.entity");
-const types_1 = require("src/types");
+const types_1 = require("../types");
 const gateway_entity_1 = require("./gateway.entity");
 const plans_description_entity_1 = require("./plans_description.entity");
 let Plans = class Plans {

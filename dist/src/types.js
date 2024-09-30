@@ -167,6 +167,7 @@ class User {
         };
     }
     getUnlokedData(data) {
+        var _a, _b;
         const forClean = [
             "email",
             "first_name",
@@ -202,8 +203,8 @@ class User {
             country_2: data.country_2,
             health_system_affiliate_number: data.health_system_affiliate_number,
             health_system_plan: data.health_system_plan,
-            phone_number: this.convertToString(data.phone_number),
-            phone_number_landline: this.convertToString(data.phone_number_landline),
+            phone_number: (_a = this.convertToString(data.phone_number)) !== null && _a !== void 0 ? _a : undefined,
+            phone_number_landline: (_b = this.convertToString(data.phone_number_landline)) !== null && _b !== void 0 ? _b : undefined,
             whatsapp: data.whatsapp,
             birth_date: data.birth_date,
             document_type: data.document_type,

@@ -194,7 +194,7 @@ export interface IUserLockedData {
 }
 //@TODO revisar aca el numero de telefono fijo
 export interface IUserUnlockedData {
-	email: string;
+	email: string | undefined;
 	first_name?: string;
 	last_name?: string;
 	address?: string;
@@ -208,8 +208,8 @@ export interface IUserUnlockedData {
 	health_system_affiliate_number?: string;
 	health_system_plan?: string;
 	health_system_data?: RawHealthSystem;
-	phone_number?: PhoneNumber;
-	phone_number_landline?: PhoneNumber;
+	phone_number?: PhoneNumber | undefined;
+	phone_number_landline?: PhoneNumber | undefined;
 	whatsapp?: PhoneNumber;
 	birth_date?: number;
 	gender?: GenderType;
@@ -286,8 +286,8 @@ export class User implements User {
 			country_2: data.country_2,
 			health_system_affiliate_number: data.health_system_affiliate_number,
 			health_system_plan: data.health_system_plan,
-			phone_number: this.convertToString(data.phone_number),
-			phone_number_landline: this.convertToString(data.phone_number_landline),
+			phone_number: this.convertToString(data.phone_number)?? undefined,
+			phone_number_landline: this.convertToString(data.phone_number_landline) ?? undefined,
 			whatsapp: data.whatsapp,
 			birth_date: data.birth_date,
 			document_type: data.document_type,
