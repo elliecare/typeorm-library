@@ -1,4 +1,4 @@
-import { GenderType, PhoneNumber } from "../types";
+import { GenderType, PhoneNumber } from "src/types";
 import {
 	Entity,
 	PrimaryGeneratedColumn,
@@ -80,7 +80,9 @@ export class Purchase {
 	@Column()
 	plan: string; // este es el id de la tabla plans
 
-	@Column()
+	@Column({
+		nullable: true,
+	})
 	subscription_id: string; // este es el id de la subs en mercadopago
 
 	@Column({ default: false })
