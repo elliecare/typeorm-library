@@ -14,12 +14,5 @@
     "rootDir": ".",
     "baseUrl": ".",
     "esModuleInterop": true,
-    "paths": {
-      "@controllers": ["./src/controller/v1/index"],
-      "@controllersV2": ["./src/controller/v2/index"],
-      "@services": ["./src/services/index"],
-      "@tdo": ["./src/tdo/index"],
-      "@validation": ["./src/middleware/validation/index"]
-    }
   }
 }

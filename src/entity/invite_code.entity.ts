@@ -1,4 +1,4 @@
-import { SupportNetworkUserType } from "src/types";
+import { SupportNetworkUserType } from "../types";
 import {
 	Entity,
 	PrimaryGeneratedColumn,
