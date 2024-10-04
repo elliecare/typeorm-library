@@ -9,7 +9,7 @@ import {
 	ManyToOne,
 	JoinColumn,
 } from "typeorm";
-import { TrackingStatus } from "src/types";
+import { TrackingStatus } from "../types";
 import { Smartwatch } from "./smartwatch.entity";
 import { CompanyClient } from "./company_client.entity";
 

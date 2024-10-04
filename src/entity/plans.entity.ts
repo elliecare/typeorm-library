@@ -9,7 +9,7 @@ import {
 	UpdateDateColumn,
 } from "typeorm";
 import { CompanyClient } from "./company_client.entity";
-import { PlanType, SubscriptionType, Vendors } from "src/types";
+import { PlanType, SubscriptionType, Vendors } from "../types";
 import { Gateway } from "./gateway.entity";
 import { PlansDescription } from "./plans_description.entity";
 

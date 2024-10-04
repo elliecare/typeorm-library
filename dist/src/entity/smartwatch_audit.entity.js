@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Smartwatch_audit = void 0;
 const typeorm_1 = require("typeorm");
 const smartwatch_entity_1 = require("./smartwatch.entity");
-const types_1 = require("src/types");
+const types_1 = require("../types");
 const user_entity_1 = require("./user.entity");
 let Smartwatch_audit = class Smartwatch_audit {
 };
