@@ -27,6 +27,11 @@ export class EventEntity {
 	sw_config: any;
 
 	@Column({
+		nullable: true,
+	})
+	trigger_value: any;
+
+	@Column({
 		type: "jsonb",
 		nullable: true,
 	})
