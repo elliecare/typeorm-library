@@ -36,6 +36,12 @@ __decorate([
 ], EventEntity.prototype, "sw_config", void 0);
 __decorate([
     (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", Object)
+], EventEntity.prototype, "trigger_value", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
         type: "jsonb",
         nullable: true,
     }),
