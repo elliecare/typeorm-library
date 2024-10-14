@@ -1,4 +1,4 @@
-import { GenderType, PhoneNumber } from "src/types";
+import { GenderType, PhoneNumber } from "../types";
 import {
 	Entity,
 	PrimaryGeneratedColumn,
