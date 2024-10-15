@@ -13,6 +13,7 @@ exports.EventEntity = void 0;
 const typeorm_1 = require("typeorm");
 const types_1 = require("../types");
 const user_entity_1 = require("./user.entity");
+const smartwatch_entity_1 = require("./smartwatch.entity");
 let EventEntity = class EventEntity {
 };
 exports.EventEntity = EventEntity;
@@ -56,6 +57,11 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: "user_id" }),
     __metadata("design:type", user_entity_1.User)
 ], EventEntity.prototype, "user", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => smartwatch_entity_1.Smartwatch),
+    (0, typeorm_1.JoinColumn)({ name: "smartwatch_id" }),
+    __metadata("design:type", smartwatch_entity_1.Smartwatch)
+], EventEntity.prototype, "smartwatch", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

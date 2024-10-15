@@ -8,6 +8,7 @@ import {
 } from "typeorm";
 import { EventOriginType, EventType } from "../types";
 import { User } from "./user.entity";
+import { Smartwatch } from "./smartwatch.entity";
 
 @Entity()
 export class EventEntity {
@@ -43,6 +44,10 @@ export class EventEntity {
 	@ManyToOne(() => User)
 	@JoinColumn({ name: "user_id" })
 	user: User;
+
+	@ManyToOne(() => Smartwatch)
+	@JoinColumn({ name: "smartwatch_id" })
+	smartwatch: Smartwatch;
 
 	@CreateDateColumn()
 	created_at: Date;
