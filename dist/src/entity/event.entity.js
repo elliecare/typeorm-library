@@ -38,6 +38,7 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
+        type: "jsonb"
     }),
     __metadata("design:type", Object)
 ], EventEntity.prototype, "trigger_value", void 0);
