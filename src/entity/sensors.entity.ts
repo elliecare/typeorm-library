@@ -60,7 +60,7 @@ export class Sensors {
 	@Column({nullable:true})
 	steps_updated_at: Date;
 
-	@Column("simple-array")
+	@Column({nullable:true,type:"simple-array"})
 	heart_rate: number[];
 
 	@Column({nullable:true})

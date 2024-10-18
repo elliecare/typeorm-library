@@ -83,7 +83,7 @@ __decorate([
     __metadata("design:type", Date)
 ], Sensors.prototype, "steps_updated_at", void 0);
 __decorate([
-    (0, typeorm_1.Column)("simple-array"),
+    (0, typeorm_1.Column)({ nullable: true, type: "simple-array" }),
     __metadata("design:type", Array)
 ], Sensors.prototype, "heart_rate", void 0);
 __decorate([
