@@ -35,11 +35,19 @@ __decorate([
     __metadata("design:type", Number)
 ], Sensors.prototype, "long", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "location_updated_at", void 0);
+__decorate([
     (0, typeorm_1.Column)({
         type: "numeric",
     }),
     __metadata("design:type", Number)
 ], Sensors.prototype, "battery_level", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "battery_level_updated_at", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
@@ -47,9 +55,41 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Sensors.prototype, "battery_plugged", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "battery_plugged_updated_at", void 0);
+__decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Sensors.prototype, "app_version", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "app_version_updated_at", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Boolean)
+], Sensors.prototype, "off_body", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "off_body_updated_at", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Number)
+], Sensors.prototype, "steps", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "steps_updated_at", void 0);
+__decorate([
+    (0, typeorm_1.Column)("simple-array"),
+    __metadata("design:type", Array)
+], Sensors.prototype, "heart_rate", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "heart_rate_updated_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
