@@ -8,6 +8,7 @@ import {
 } from "typeorm";
 import { EventOriginType, EventType } from "../types";
 import { User } from "./user.entity";
+import { Smartwatch } from "./smartwatch.entity";
 
 @Entity()
 export class EventEntity {
@@ -27,6 +28,12 @@ export class EventEntity {
 	sw_config: any;
 
 	@Column({
+		nullable: true,
+		type: "jsonb"
+	})
+	trigger_value: any;
+
+	@Column({
 		type: "jsonb",
 		nullable: true,
 	})
@@ -38,6 +45,10 @@ export class EventEntity {
 	@ManyToOne(() => User)
 	@JoinColumn({ name: "user_id" })
 	user: User;
+
+	@ManyToOne(() => Smartwatch)
+	@JoinColumn({ name: "smartwatch_id" })
+	smartwatch: Smartwatch;
 
 	@CreateDateColumn()
 	created_at: Date;
