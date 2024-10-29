@@ -42,11 +42,11 @@ export class EventEntity {
 	@Column()
 	origin: EventOriginType;
 
-	@ManyToOne(() => User)
+	@ManyToOne(() => User, { eager: true })
 	@JoinColumn({ name: "user_id" })
 	user: User;
 
-	@ManyToOne(() => Smartwatch)
+	@ManyToOne(() => Smartwatch, { eager: true })
 	@JoinColumn({ name: "smartwatch_id" })
 	smartwatch: Smartwatch;
 

@@ -54,12 +54,12 @@ __decorate([
     __metadata("design:type", String)
 ], EventEntity.prototype, "origin", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => user_entity_1.User),
+    (0, typeorm_1.ManyToOne)(() => user_entity_1.User, { eager: true }),
     (0, typeorm_1.JoinColumn)({ name: "user_id" }),
     __metadata("design:type", user_entity_1.User)
 ], EventEntity.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => smartwatch_entity_1.Smartwatch),
+    (0, typeorm_1.ManyToOne)(() => smartwatch_entity_1.Smartwatch, { eager: true }),
     (0, typeorm_1.JoinColumn)({ name: "smartwatch_id" }),
     __metadata("design:type", smartwatch_entity_1.Smartwatch)
 ], EventEntity.prototype, "smartwatch", void 0);
