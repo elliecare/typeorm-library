@@ -18,8 +18,8 @@ const user_entity_1 = require("./user.entity");
 const company_client_entity_1 = require("./company_client.entity");
 const event_entity_1 = require("./event.entity");
 let Alert = class Alert {
-    getformattedAlertByCC(input) {
-        const { id, created_at, type, event: { measurements: { location }, smartwatch }, user } = input;
+    getformattedAlertByCC() {
+        const { id, created_at, type, event: { measurements: { location }, smartwatch }, user } = this;
         return {
             id,
             created_at,
@@ -41,8 +41,8 @@ let Alert = class Alert {
             },
         };
     }
-    getPatientName(input) {
-        return !input.event.user.first_name && !input.event.user.last_name ? input.event.user.cc_user_id : input.event.user.first_name + ' ' + input.event.user.last_name;
+    getPatientName() {
+        return !this.event.user.first_name && !this.event.user.last_name ? this.event.user.cc_user_id : this.event.user.first_name + ' ' + this.event.user.last_name;
     }
 };
 exports.Alert = Alert;

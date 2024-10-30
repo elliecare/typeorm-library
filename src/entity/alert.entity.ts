@@ -107,8 +107,8 @@ export class Alert {
 	@UpdateDateColumn()
 	updated_at: Date;
 
-	getformattedAlertByCC(input: Partial<Alert>):{} {
-		const {id,created_at,type,event:{measurements:{location},smartwatch},user} = input;
+	getformattedAlertByCC():{} {
+		const {id,created_at,type,event:{measurements:{location},smartwatch},user} = this;
 	
 		return {
 			id,
@@ -132,7 +132,7 @@ export class Alert {
 		};
 	}
 
-	getPatientName(input:Alert):string{
-		return !input.event.user.first_name && !input.event.user.last_name ? input.event.user.cc_user_id : input.event.user.first_name+' '+input.event.user.last_name;
+	getPatientName():string{
+		return !this.event.user.first_name && !this.event.user.last_name ? this.event.user.cc_user_id : this.event.user.first_name+' '+this.event.user.last_name;
 	}
 }
