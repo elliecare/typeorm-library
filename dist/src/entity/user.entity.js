@@ -286,6 +286,13 @@ __decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
 ], User.prototype, "apartment_info", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "jsonb",
+        nullable: true,
+    }),
+    __metadata("design:type", Object)
+], User.prototype, "location_home", void 0);
 exports.User = User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);

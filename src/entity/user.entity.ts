@@ -245,4 +245,10 @@ export class User {
 
 	@Column({ nullable: true })
 	apartment_info: string;
+
+	@Column({
+		type: "jsonb",
+		nullable: true,
+	})
+	location_home: {lat:number,lng:number};
 }
