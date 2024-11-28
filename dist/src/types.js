@@ -268,6 +268,7 @@ var Vendors;
 (function (Vendors) {
     Vendors["ELLIE_CARE"] = "Ellie Care";
     Vendors["MATER_DEI"] = "Mater Dei";
+    Vendors["ORTOPEDIA_ALEMANA"] = "Ortopedia Alemana";
 })(Vendors || (exports.Vendors = Vendors = {}));
 var NotificationType;
 (function (NotificationType) {
