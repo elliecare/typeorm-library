@@ -15,7 +15,7 @@ export class Support_network_audit {
 	id: string;
 
 	@ManyToOne(() => User, { eager: true, nullable: true })
-	@JoinColumn({ name: "operato_id" })
+	@JoinColumn({ name: "operator_id" })
 	operator: User;
 
 	@ManyToOne(() => SupportNetwork)
