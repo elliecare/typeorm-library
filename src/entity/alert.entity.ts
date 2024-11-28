@@ -25,14 +25,14 @@ export class Alert {
 	@JoinColumn({ name: "user_id" })
 	user: User;
 	
-	@Column({ name: "user_id" })
+	@Column({ name: "user_id", nullable:true })
 	user_id: string;
 
 	@OneToOne(() => EventEntity)
 	@JoinColumn({ name: "event_id" })
 	event: EventEntity;
 	
-	@Column({ name: "event_id" })
+	@Column({ name: "event_id", nullable:true })
 	event_id: string;
 
 	@Column({
@@ -106,7 +106,7 @@ export class Alert {
 	@JoinColumn({ name: "company_client_id" })
 	company_client: CompanyClient;
 	
-	@Column({ name: "company_client_id" })
+	@Column({ name: "company_client_id", nullable:true })
 	company_client_id: string;
 
 	@CreateDateColumn()

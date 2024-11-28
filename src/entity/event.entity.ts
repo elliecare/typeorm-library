@@ -46,14 +46,14 @@ export class EventEntity {
 	@JoinColumn({ name: "user_id" })
 	user: User;
 	
-	@Column({ name: "user_id" })
+	@Column({ name: "user_id", nullable:true })
 	user_id: string;
 
 	@ManyToOne(() => Smartwatch)
 	@JoinColumn({ name: "smartwatch_id" })
 	smartwatch: Smartwatch;
 	
-	@Column({ name: "smartwatch_id" })
+	@Column({ name: "smartwatch_id", nullable:true })
 	smartwatch_id: string;
 
 	@CreateDateColumn()
