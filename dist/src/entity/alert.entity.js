@@ -56,7 +56,7 @@ __decorate([
     __metadata("design:type", user_entity_1.User)
 ], Alert.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "user_id" }),
+    (0, typeorm_1.Column)({ name: "user_id", nullable: true }),
     __metadata("design:type", String)
 ], Alert.prototype, "user_id", void 0);
 __decorate([
@@ -65,7 +65,7 @@ __decorate([
     __metadata("design:type", event_entity_1.EventEntity)
 ], Alert.prototype, "event", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "event_id" }),
+    (0, typeorm_1.Column)({ name: "event_id", nullable: true }),
     __metadata("design:type", String)
 ], Alert.prototype, "event_id", void 0);
 __decorate([
@@ -147,7 +147,7 @@ __decorate([
     __metadata("design:type", company_client_entity_1.CompanyClient)
 ], Alert.prototype, "company_client", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "company_client_id" }),
+    (0, typeorm_1.Column)({ name: "company_client_id", nullable: true }),
     __metadata("design:type", String)
 ], Alert.prototype, "company_client_id", void 0);
 __decorate([
