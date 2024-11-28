@@ -22,7 +22,7 @@ __decorate([
 ], Support_network_audit.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => user_entity_1.User, { eager: true, nullable: true }),
-    (0, typeorm_1.JoinColumn)({ name: "operato_id" }),
+    (0, typeorm_1.JoinColumn)({ name: "operator_id" }),
     __metadata("design:type", user_entity_1.User)
 ], Support_network_audit.prototype, "operator", void 0);
 __decorate([
