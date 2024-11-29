@@ -21,14 +21,19 @@ export class Alert {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
 
-	@ManyToOne(() => User, (user) => user.alert, {
-		cascade: true,
-	})
+	@ManyToOne(() => User)
+	@JoinColumn({ name: "user_id" })
 	user: User;
+	
+	@Column({ name: "user_id", nullable:true })
+	user_id: string;
 
-	@OneToOne(() => EventEntity, { eager: true })
+	@OneToOne(() => EventEntity)
 	@JoinColumn({ name: "event_id" })
 	event: EventEntity;
+	
+	@Column({ name: "event_id", nullable:true })
+	event_id: string;
 
 	@Column({
 		type: "enum",
@@ -97,9 +102,12 @@ export class Alert {
 	})
 	message: Message[];
 
-	@ManyToOne(() => CompanyClient, { eager: true })
+	@ManyToOne(() => CompanyClient)
 	@JoinColumn({ name: "company_client_id" })
 	company_client: CompanyClient;
+	
+	@Column({ name: "company_client_id", nullable:true })
+	company_client_id: string;
 
 	@CreateDateColumn()
 	created_at: Date;

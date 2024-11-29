@@ -9,50 +9,50 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Support_network_audit = void 0;
+exports.Alert_audit = void 0;
 const typeorm_1 = require("typeorm");
-const support_network_entity_1 = require("./support_network.entity");
 const user_entity_1 = require("./user.entity");
-let Support_network_audit = class Support_network_audit {
+const alert_entity_1 = require("./alert.entity");
+let Alert_audit = class Alert_audit {
 };
-exports.Support_network_audit = Support_network_audit;
+exports.Alert_audit = Alert_audit;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
-], Support_network_audit.prototype, "id", void 0);
+], Alert_audit.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => user_entity_1.User, { eager: true, nullable: true }),
     (0, typeorm_1.JoinColumn)({ name: "operator_id" }),
     __metadata("design:type", user_entity_1.User)
-], Support_network_audit.prototype, "operator", void 0);
+], Alert_audit.prototype, "operator", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => support_network_entity_1.SupportNetwork),
-    (0, typeorm_1.JoinColumn)({ name: "support_network_id" }),
-    __metadata("design:type", support_network_entity_1.SupportNetwork)
-], Support_network_audit.prototype, "support_network", void 0);
+    (0, typeorm_1.ManyToOne)(() => alert_entity_1.Alert),
+    (0, typeorm_1.JoinColumn)({ name: "alert_id" }),
+    __metadata("design:type", alert_entity_1.Alert)
+], Alert_audit.prototype, "alert", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "jsonb",
         nullable: true,
     }),
-    __metadata("design:type", support_network_entity_1.SupportNetwork)
-], Support_network_audit.prototype, "support_network_snapshot", void 0);
+    __metadata("design:type", alert_entity_1.Alert)
+], Alert_audit.prototype, "alert_snapshot", void 0);
 __decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
-], Support_network_audit.prototype, "observations", void 0);
+], Alert_audit.prototype, "observations", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         default: false,
         type: "boolean",
     }),
     __metadata("design:type", Boolean)
-], Support_network_audit.prototype, "read", void 0);
+], Alert_audit.prototype, "read", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], Support_network_audit.prototype, "created_at", void 0);
-exports.Support_network_audit = Support_network_audit = __decorate([
+], Alert_audit.prototype, "created_at", void 0);
+exports.Alert_audit = Alert_audit = __decorate([
     (0, typeorm_1.Entity)()
-], Support_network_audit);
-//# sourceMappingURL=support_network_audit.entity.js.map
+], Alert_audit);
+//# sourceMappingURL=alert_audit.entity.js.map
