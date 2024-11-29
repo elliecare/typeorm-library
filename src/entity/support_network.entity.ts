@@ -87,4 +87,7 @@ export class SupportNetwork {
 	@OneToOne(() => Smartwatch)
 	@JoinColumn({ name: "smartwatch_id" })
 	smartwatch: Smartwatch;
+
+	@Column({ default: false })
+	agree_show_location: boolean;
 }
