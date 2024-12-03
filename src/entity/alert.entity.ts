@@ -117,6 +117,7 @@ export class Alert {
 
 	getformattedAlertByCC():{} {
 		const {id,created_at,type,event:{measurements:{location},smartwatch},user} = this;
+		console.log('this', this)
 	
 		return {
 			id,
