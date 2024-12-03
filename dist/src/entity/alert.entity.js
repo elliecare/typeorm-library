@@ -20,7 +20,6 @@ const event_entity_1 = require("./event.entity");
 let Alert = class Alert {
     getformattedAlertByCC() {
         const { id, created_at, type, event: { measurements: { location }, smartwatch }, user } = this;
-        console.log('this', this);
         return {
             id,
             created_at,
