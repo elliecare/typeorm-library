@@ -5,13 +5,11 @@ import {
 	CreateDateColumn,
 	UpdateDateColumn,
 	DeleteDateColumn,
-	OneToMany,
 	OneToOne,
 	JoinColumn,
 } from "typeorm";
 import { PlanType, SubscriptionStatus } from "../types";
 import { Smartwatch } from "./smartwatch.entity";
-import { User } from "./user.entity";
 
 @Entity()
 export class SupportNetwork {
@@ -80,9 +78,6 @@ export class SupportNetwork {
 
 	@Column({ nullable: true })
 	name: string;
-
-	@OneToMany(() => User, (user) => user.support_network)
-	users: User[];
 
 	@OneToOne(() => Smartwatch)
 	@JoinColumn({ name: "smartwatch_id" })

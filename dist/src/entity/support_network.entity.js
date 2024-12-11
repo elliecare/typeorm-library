@@ -13,7 +13,6 @@ exports.SupportNetwork = void 0;
 const typeorm_1 = require("typeorm");
 const types_1 = require("../types");
 const smartwatch_entity_1 = require("./smartwatch.entity");
-const user_entity_1 = require("./user.entity");
 let SupportNetwork = class SupportNetwork {
 };
 exports.SupportNetwork = SupportNetwork;
@@ -97,10 +96,6 @@ __decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
 ], SupportNetwork.prototype, "name", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => user_entity_1.User, (user) => user.support_network),
-    __metadata("design:type", Array)
-], SupportNetwork.prototype, "users", void 0);
 __decorate([
     (0, typeorm_1.OneToOne)(() => smartwatch_entity_1.Smartwatch),
     (0, typeorm_1.JoinColumn)({ name: "smartwatch_id" }),
