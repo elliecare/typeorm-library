@@ -10,7 +10,6 @@ import {AppVersion} from './src/entity/appversion.entity';
 import {Battery} from './src/entity/battery.entity';
 import {Config} from './src/entity/config.entity';
 import {Config_audit} from './src/entity/config_audit.entity';
-import {Device} from './src/entity/device.entity';
 import {DiscountCode} from './src/entity/discount_code.entity';
 import {EllieCoins} from './src/entity/ellie_coins.entity';
 import {EventEntity} from './src/entity/event.entity';
@@ -18,7 +17,7 @@ import {Gateway} from './src/entity/gateway.entity';
 import {Gateway_audit} from './src/entity/gateway_audit.entity';
 import {HealthSystem} from './src/entity/health_system.entity';
 import {Health_system_audit} from './src/entity/health_system_audit.entity';
-import  {HeartRate} from './src/entity/heart_rate.entity';
+import {HeartRate} from './src/entity/heart_rate.entity';
 import {InviteCode} from './src/entity/invite_code.entity';
 import {LineProvider} from './src/entity/line_provider.entity';
 import {Location} from './src/entity/location.entity';
@@ -44,21 +43,23 @@ import {UserOperationalRole} from './src/entity/user_operational_role.entity';
 import {UserSmartwatch} from './src/entity/user_smartwatch.entity';
 import {Users_smartwatches_audit} from './src/entity/user_smartwatch_audit.entity';
 import {CompanyClient} from './src/entity/company_client.entity';
+import {Alert_audit} from './src/entity/alert_audit.entity';
 
-export const Entities = [Steps,CompanyClient,InviteCode,Device,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,EllieCoins,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs, AppVersion]
+
+export const Entities = [Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,EllieCoins,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs, AppVersion]
 
 export { Plans };
 export { PatientAgentContact };
 export { Plans_audit };
 export { AccessCode };
 export { Alert };
+export { Alert_audit };
 export { AlertConfiguration };
 export { AlertLogs };
 export { AppVersion };
 export { Battery };
 export { Config };
 export { Config_audit };
-export { Device };
 export { DiscountCode };
 export { EllieCoins };
 export { EventEntity };

@@ -18,7 +18,6 @@ import {
 	UserRole,
 } from "../types";
 import { Alert } from "./alert.entity";
-import { Device } from "./device.entity";
 import { EllieCoins } from "./ellie_coins.entity";
 import { HealthSystem } from "./health_system.entity";
 import { Measurement } from "./measurement.entity";
@@ -146,9 +145,10 @@ export class User {
 	@JoinColumn({ name: "healthSystemDataId" })
 	health_system_data: HealthSystem;
 
-	@OneToOne(() => Device, { eager: true })
-	@JoinColumn({ name: "device_id" })
-	device: Device;
+	@Column({
+		nullable: true,
+	})
+	device: string;
 
 	@Column({
 		nullable: true,
@@ -245,4 +245,10 @@ export class User {
 
 	@Column({ nullable: true })
 	apartment_info: string;
+
+	@Column({
+		type: "jsonb",
+		nullable: true,
+	})
+	location_home: {lat:number,lng:number};
 }

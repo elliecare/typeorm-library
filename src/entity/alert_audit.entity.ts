@@ -6,11 +6,11 @@ import {
 	ManyToOne,
 	JoinColumn,
 } from "typeorm";
-import { SupportNetwork } from "./support_network.entity";
 import { User } from "./user.entity";
+import { Alert } from "./alert.entity";
 
 @Entity()
-export class Support_network_audit {
+export class Alert_audit {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
 
@@ -18,15 +18,15 @@ export class Support_network_audit {
 	@JoinColumn({ name: "operator_id" })
 	operator: User;
 
-	@ManyToOne(() => SupportNetwork)
-	@JoinColumn({ name: "support_network_id" })
-	support_network: SupportNetwork;
+	@ManyToOne(() => Alert)
+	@JoinColumn({ name: "alert_id" })
+	alert: Alert;
 
 	@Column({
 		type: "jsonb",
 		nullable: true,
 	})
-	support_network_snapshot: SupportNetwork;
+	alert_snapshot: Alert;
 
 	@Column({ nullable: true })
 	observations: string;

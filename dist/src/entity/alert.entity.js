@@ -20,6 +20,7 @@ const event_entity_1 = require("./event.entity");
 let Alert = class Alert {
     getformattedAlertByCC() {
         const { id, created_at, type, event: { measurements: { location }, smartwatch }, user } = this;
+        console.log('this', this);
         return {
             id,
             created_at,
@@ -51,16 +52,23 @@ __decorate([
     __metadata("design:type", String)
 ], Alert.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => user_entity_1.User, (user) => user.alert, {
-        cascade: true,
-    }),
+    (0, typeorm_1.ManyToOne)(() => user_entity_1.User),
+    (0, typeorm_1.JoinColumn)({ name: "user_id" }),
     __metadata("design:type", user_entity_1.User)
 ], Alert.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.OneToOne)(() => event_entity_1.EventEntity, { eager: true }),
+    (0, typeorm_1.Column)({ name: "user_id", nullable: true }),
+    __metadata("design:type", String)
+], Alert.prototype, "user_id", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => event_entity_1.EventEntity),
     (0, typeorm_1.JoinColumn)({ name: "event_id" }),
     __metadata("design:type", event_entity_1.EventEntity)
 ], Alert.prototype, "event", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: "event_id", nullable: true }),
+    __metadata("design:type", String)
+], Alert.prototype, "event_id", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "enum",
@@ -135,10 +143,14 @@ __decorate([
     __metadata("design:type", Array)
 ], Alert.prototype, "message", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, { eager: true }),
+    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient),
     (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
     __metadata("design:type", company_client_entity_1.CompanyClient)
 ], Alert.prototype, "company_client", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: "company_client_id", nullable: true }),
+    __metadata("design:type", String)
+], Alert.prototype, "company_client_id", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

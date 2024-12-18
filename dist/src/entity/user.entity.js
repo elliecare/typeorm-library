@@ -13,7 +13,6 @@ exports.User = void 0;
 const typeorm_1 = require("typeorm");
 const types_1 = require("../types");
 const alert_entity_1 = require("./alert.entity");
-const device_entity_1 = require("./device.entity");
 const ellie_coins_entity_1 = require("./ellie_coins.entity");
 const health_system_entity_1 = require("./health_system.entity");
 const measurement_entity_1 = require("./measurement.entity");
@@ -165,9 +164,10 @@ __decorate([
     __metadata("design:type", health_system_entity_1.HealthSystem)
 ], User.prototype, "health_system_data", void 0);
 __decorate([
-    (0, typeorm_1.OneToOne)(() => device_entity_1.Device, { eager: true }),
-    (0, typeorm_1.JoinColumn)({ name: "device_id" }),
-    __metadata("design:type", device_entity_1.Device)
+    (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", String)
 ], User.prototype, "device", void 0);
 __decorate([
     (0, typeorm_1.Column)({
@@ -286,6 +286,13 @@ __decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
 ], User.prototype, "apartment_info", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "jsonb",
+        nullable: true,
+    }),
+    __metadata("design:type", Object)
+], User.prototype, "location_home", void 0);
 exports.User = User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);
