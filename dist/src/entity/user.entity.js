@@ -13,10 +13,8 @@ exports.User = void 0;
 const typeorm_1 = require("typeorm");
 const types_1 = require("../types");
 const alert_entity_1 = require("./alert.entity");
-const ellie_coins_entity_1 = require("./ellie_coins.entity");
 const health_system_entity_1 = require("./health_system.entity");
 const measurement_entity_1 = require("./measurement.entity");
-const support_network_entity_1 = require("./support_network.entity");
 let User = class User {
 };
 exports.User = User;
@@ -42,14 +40,6 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "enum",
-        enum: types_1.UserRole,
-        default: types_1.UserRole.USER,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "role", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
@@ -87,30 +77,6 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "country", void 0);
 __decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "address_2", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "city_2", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "province_2", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "country_2", void 0);
-__decorate([
     (0, typeorm_1.Column)("bigint", {
         nullable: true,
     }),
@@ -135,20 +101,6 @@ __decorate([
         nullable: true,
     }),
     __metadata("design:type", String)
-], User.prototype, "support_network_id", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "enum",
-        enum: types_1.SupportNetworkUserType,
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "support_network_role", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
 ], User.prototype, "health_system_affiliate_number", void 0);
 __decorate([
     (0, typeorm_1.Column)({
@@ -163,12 +115,6 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: "healthSystemDataId" }),
     __metadata("design:type", health_system_entity_1.HealthSystem)
 ], User.prototype, "health_system_data", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "device", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
@@ -201,13 +147,6 @@ __decorate([
         nullable: true,
     }),
     __metadata("design:type", Object)
-], User.prototype, "phone_number_sw", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
 ], User.prototype, "whatsapp", void 0);
 __decorate([
     (0, typeorm_1.Column)({
@@ -223,20 +162,6 @@ __decorate([
     __metadata("design:type", Date)
 ], User.prototype, "last_login", void 0);
 __decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "subscription_id", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "enum",
-        enum: types_1.Payment,
-        default: null,
-    }),
-    __metadata("design:type", String)
-], User.prototype, "payment", void 0);
-__decorate([
     (0, typeorm_1.OneToMany)(() => measurement_entity_1.Measurement, (measurement) => measurement.user),
     __metadata("design:type", Array)
 ], User.prototype, "measurement", void 0);
@@ -244,29 +169,6 @@ __decorate([
     (0, typeorm_1.OneToMany)(() => alert_entity_1.Alert, (alert) => alert.user),
     __metadata("design:type", Array)
 ], User.prototype, "alert", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => ellie_coins_entity_1.EllieCoins, (ellieCoins) => ellieCoins.user),
-    __metadata("design:type", Array)
-], User.prototype, "ellie_coins", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)(() => support_network_entity_1.SupportNetwork, (supportNetwork) => supportNetwork.users, {
-        eager: true,
-    }),
-    (0, typeorm_1.JoinColumn)({ name: "support_network_id" }),
-    __metadata("design:type", support_network_entity_1.SupportNetwork)
-], User.prototype, "support_network", void 0);
-__decorate([
-    (0, typeorm_1.CreateDateColumn)(),
-    __metadata("design:type", Date)
-], User.prototype, "created_at", void 0);
-__decorate([
-    (0, typeorm_1.UpdateDateColumn)(),
-    __metadata("design:type", Date)
-], User.prototype, "updated_at", void 0);
-__decorate([
-    (0, typeorm_1.DeleteDateColumn)(),
-    __metadata("design:type", Date)
-], User.prototype, "deleted_at", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: Boolean,
@@ -293,6 +195,18 @@ __decorate([
     }),
     __metadata("design:type", Object)
 ], User.prototype, "location_home", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)(),
+    __metadata("design:type", Date)
+], User.prototype, "created_at", void 0);
+__decorate([
+    (0, typeorm_1.UpdateDateColumn)(),
+    __metadata("design:type", Date)
+], User.prototype, "updated_at", void 0);
+__decorate([
+    (0, typeorm_1.DeleteDateColumn)(),
+    __metadata("design:type", Date)
+], User.prototype, "deleted_at", void 0);
 exports.User = User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);
