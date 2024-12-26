@@ -52,13 +52,16 @@ export class Plans {
 	})
 	subscription_type: string;
 
-	@Column({ default: "logistica@ellie.care" }) //email para avisar que se realizo una venta
+	@Column({ default: "ventas@ellie.care" }) //email para avisar al Vendor o CC que se realizo una venta
+	sales_email: string;
+
+	@Column({ default: "logistica@ellie.care" }) //email para avisar a EllieCare que se realizo una venta
 	vendor_email: string;
 
 	@Column({ default: "mail_to_logistics" }) //nombre del template que van a usar en la libreria de emails
 	vendor_template_email: string;
 
-	@Column({ default: "subscription_gold" }) //email para el usuario confirmando compra de subscripcion dependiendo el
+	@Column({ default: "subscription_gold" }) //email para el usuario confirmando compra de subscripcion dependiendo el plan
 	user_template_email: string;
 
 	@Column({ nullable: true })
