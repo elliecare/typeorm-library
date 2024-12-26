@@ -64,7 +64,12 @@ __decorate([
     __metadata("design:type", String)
 ], Plans.prototype, "subscription_type", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "logistica@ellie.care" }) //email para avisar que se realizo una venta
+    (0, typeorm_1.Column)({ default: "ventas@ellie.care" }) //email para avisar al Vendor o CC que se realizo una venta
+    ,
+    __metadata("design:type", String)
+], Plans.prototype, "sales_email", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ default: "logistica@ellie.care" }) //email para avisar a EllieCare que se realizo una venta
     ,
     __metadata("design:type", String)
 ], Plans.prototype, "vendor_email", void 0);
@@ -74,7 +79,7 @@ __decorate([
     __metadata("design:type", String)
 ], Plans.prototype, "vendor_template_email", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "subscription_gold" }) //email para el usuario confirmando compra de subscripcion dependiendo el
+    (0, typeorm_1.Column)({ default: "subscription_gold" }) //email para el usuario confirmando compra de subscripcion dependiendo el plan
     ,
     __metadata("design:type", String)
 ], Plans.prototype, "user_template_email", void 0);
