@@ -4,8 +4,7 @@ import {
 	Column,
 	CreateDateColumn,
 	ManyToOne,
-	JoinColumn,
-	DeleteDateColumn,
+	JoinColumn
 } from "typeorm";
 import { User } from "./user.entity";
 
@@ -17,17 +16,10 @@ export class PasswordResetToken {
 	@ManyToOne(() => User)
 	@JoinColumn({ name: "user_id" })
 	user: User;
-	
-	@Column({ name: "user_id", nullable:true })
-	user_id: string;
-	
-	@Column({ type:"varchar" })
-	token: string;
 
 	@CreateDateColumn()
 	created_at: Date;
 
 	@Column()
 	expires_at: Date;
-
 }

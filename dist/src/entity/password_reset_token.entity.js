@@ -25,19 +25,11 @@ __decorate([
     __metadata("design:type", user_entity_1.User)
 ], PasswordResetToken.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "user_id", nullable: true }),
-    __metadata("design:type", String)
-], PasswordResetToken.prototype, "user_id", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: "varchar" }),
-    __metadata("design:type", String)
-], PasswordResetToken.prototype, "token", void 0);
-__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], PasswordResetToken.prototype, "created_at", void 0);
 __decorate([
-    (0, typeorm_1.DeleteDateColumn)(),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", Date)
 ], PasswordResetToken.prototype, "expires_at", void 0);
 exports.PasswordResetToken = PasswordResetToken = __decorate([
