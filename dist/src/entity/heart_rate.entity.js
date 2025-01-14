@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HeartRate = void 0;
 const typeorm_1 = require("typeorm");
-const appversion_entity_1 = require("./appversion.entity");
 let HeartRate = class HeartRate {
 };
 exports.HeartRate = HeartRate;
@@ -28,9 +27,8 @@ __decorate([
     __metadata("design:type", Array)
 ], HeartRate.prototype, "heart_rate", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => appversion_entity_1.AppVersion, { eager: true }),
-    (0, typeorm_1.JoinColumn)({ name: "app_version_id" }),
-    __metadata("design:type", appversion_entity_1.AppVersion)
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
 ], HeartRate.prototype, "app_version", void 0);
 __decorate([
     (0, typeorm_1.Column)(),

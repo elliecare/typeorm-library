@@ -2,11 +2,8 @@ import {
     Entity,
     PrimaryGeneratedColumn,
     Column,
-    CreateDateColumn,
-    ManyToOne,
-    JoinColumn,
+    CreateDateColumn
 } from "typeorm";
-import { AppVersion } from "./appversion.entity";
 
 @Entity()
 export class Steps {
@@ -19,9 +16,8 @@ export class Steps {
     @Column()
     total: number;
 
-    @ManyToOne(() => AppVersion, { eager: true })
-    @JoinColumn({ name: "app_version_id" })
-    app_version: AppVersion;
+	@Column({nullable:true})
+	app_version: string;
 
     @Column()
     created_on_device: Date;
