@@ -6,12 +6,10 @@ import {AccessCode} from './src/entity/access_code.entity';
 import {Alert} from './src/entity/alert.entity';
 import {AlertConfiguration} from './src/entity/alert_configuration.entity';
 import {AlertLogs} from './src/entity/alert_logs.entity';
-import {AppVersion} from './src/entity/appversion.entity';
 import {Battery} from './src/entity/battery.entity';
 import {Config} from './src/entity/config.entity';
 import {Config_audit} from './src/entity/config_audit.entity';
 import {DiscountCode} from './src/entity/discount_code.entity';
-import {EllieCoins} from './src/entity/ellie_coins.entity';
 import {EventEntity} from './src/entity/event.entity';
 import {Gateway} from './src/entity/gateway.entity';
 import {Gateway_audit} from './src/entity/gateway_audit.entity';
@@ -46,7 +44,7 @@ import {CompanyClient} from './src/entity/company_client.entity';
 import {Alert_audit} from './src/entity/alert_audit.entity';
 
 
-export const Entities = [Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,EllieCoins,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs, AppVersion]
+export const Entities = [Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
 
 export { Plans };
 export { PatientAgentContact };
@@ -56,12 +54,10 @@ export { Alert };
 export { Alert_audit };
 export { AlertConfiguration };
 export { AlertLogs };
-export { AppVersion };
 export { Battery };
 export { Config };
 export { Config_audit };
 export { DiscountCode };
-export { EllieCoins };
 export { EventEntity };
 export { Gateway };
 export { Gateway_audit };

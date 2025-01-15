@@ -6,22 +6,16 @@ import {
 	DeleteDateColumn,
 	UpdateDateColumn,
 	OneToMany,
-	OneToOne,
 	JoinColumn,
 	ManyToOne,
 } from "typeorm";
 import {
 	GenderType,
-	Payment,
-	PhoneNumber,
-	SupportNetworkUserType,
-	UserRole,
+	PhoneNumber
 } from "../types";
 import { Alert } from "./alert.entity";
-import { EllieCoins } from "./ellie_coins.entity";
 import { HealthSystem } from "./health_system.entity";
 import { Measurement } from "./measurement.entity";
-import { SupportNetwork } from "./support_network.entity";
 
 @Entity()
 export class User {
@@ -42,13 +36,6 @@ export class User {
 		nullable: true,
 	})
 	email: string;
-
-	@Column({
-		type: "enum",
-		enum: UserRole,
-		default: UserRole.USER,
-	})
-	role: string;
 
 	@Column({
 		nullable: true,
@@ -80,26 +67,6 @@ export class User {
 	})
 	country: string;
 
-	@Column({
-		nullable: true,
-	})
-	address_2: string;
-
-	@Column({
-		nullable: true,
-	})
-	city_2: string;
-
-	@Column({
-		nullable: true,
-	})
-	province_2: string;
-
-	@Column({
-		nullable: true,
-	})
-	country_2: string;
-
 	@Column("bigint", {
 		nullable: true,
 	})
@@ -120,18 +87,6 @@ export class User {
 	@Column({
 		nullable: true,
 	})
-	support_network_id: string;
-
-	@Column({
-		type: "enum",
-		enum: SupportNetworkUserType,
-		nullable: true,
-	})
-	support_network_role: string;
-
-	@Column({
-		nullable: true,
-	})
 	health_system_affiliate_number: string;
 
 	@Column({
@@ -144,11 +99,6 @@ export class User {
 	})
 	@JoinColumn({ name: "healthSystemDataId" })
 	health_system_data: HealthSystem;
-
-	@Column({
-		nullable: true,
-	})
-	device: string;
 
 	@Column({
 		nullable: true,
@@ -176,12 +126,6 @@ export class User {
 		type: "jsonb",
 		nullable: true,
 	})
-	phone_number_sw: PhoneNumber;
-
-	@Column({
-		type: "jsonb",
-		nullable: true,
-	})
 	whatsapp: PhoneNumber;
 
 	@Column({
@@ -195,41 +139,11 @@ export class User {
 	})
 	last_login: Date;
 
-	@Column({
-		nullable: true,
-	})
-	subscription_id: string;
-
-	@Column({
-		type: "enum",
-		enum: Payment,
-		default: null,
-	})
-	payment: string;
-
 	@OneToMany(() => Measurement, (measurement) => measurement.user)
 	measurement: Measurement[];
 
 	@OneToMany(() => Alert, (alert) => alert.user)
 	alert: Alert[];
-
-	@OneToMany(() => EllieCoins, (ellieCoins) => ellieCoins.user)
-	ellie_coins: EllieCoins[];
-
-	@ManyToOne(() => SupportNetwork, (supportNetwork) => supportNetwork.users, {
-		eager: true,
-	})
-	@JoinColumn({ name: "support_network_id" })
-	support_network: SupportNetwork;
-
-	@CreateDateColumn()
-	created_at: Date;
-
-	@UpdateDateColumn()
-	updated_at: Date;
-
-	@DeleteDateColumn()
-	deleted_at: Date;
 
 	@Column({
 		type: Boolean,
@@ -251,4 +165,13 @@ export class User {
 		nullable: true,
 	})
 	location_home: {lat:number,lng:number};
+
+	@CreateDateColumn()
+	created_at: Date;
+
+	@UpdateDateColumn()
+	updated_at: Date;
+
+	@DeleteDateColumn()
+	deleted_at: Date;
 }
