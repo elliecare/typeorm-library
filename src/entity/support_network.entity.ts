@@ -85,4 +85,7 @@ export class SupportNetwork {
 
 	@Column({ default: false })
 	agree_show_location: boolean;
+
+	@Column({ default: null })
+	url_agree_show_location: string;
 }
