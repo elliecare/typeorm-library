@@ -21,9 +21,8 @@ export class Role_support_network_audit {
 	@Column({ nullable: true })
 	observations: string;
 
-	@ManyToOne(() => Role_SupportNetwork, { eager: true })
-	@JoinColumn({ name: "role_support_network_id" })
-	role_SupportNetwork: Role_SupportNetwork;
+	@Column({nullable: true})
+	role_support_network_id: string;
 
 	@Column({
 		type: "jsonb",
