@@ -30,10 +30,9 @@ __decorate([
     __metadata("design:type", String)
 ], Role_support_network_audit.prototype, "observations", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => role_support_network_entity_1.Role_SupportNetwork, { eager: true }),
-    (0, typeorm_1.JoinColumn)({ name: "role_support_network_id" }),
-    __metadata("design:type", role_support_network_entity_1.Role_SupportNetwork)
-], Role_support_network_audit.prototype, "role_SupportNetwork", void 0);
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], Role_support_network_audit.prototype, "role_support_network_id", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "jsonb",
