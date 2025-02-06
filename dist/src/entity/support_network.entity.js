@@ -105,6 +105,10 @@ __decorate([
     (0, typeorm_1.Column)({ default: false }),
     __metadata("design:type", Boolean)
 ], SupportNetwork.prototype, "agree_show_location", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ default: null }),
+    __metadata("design:type", String)
+], SupportNetwork.prototype, "url_agree_show_location", void 0);
 exports.SupportNetwork = SupportNetwork = __decorate([
     (0, typeorm_1.Entity)()
 ], SupportNetwork);
