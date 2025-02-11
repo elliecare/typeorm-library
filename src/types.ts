@@ -489,3 +489,8 @@ export enum DiscountCodeType {
 	AMOUNT = "amount",
 	FREETRIAL = "free_trial",
 }
+
+export enum Language {
+	ES = "Spanish",
+	EN = "English",
+}

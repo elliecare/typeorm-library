@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompanyClient = void 0;
+const types_1 = require("../types");
 const typeorm_1 = require("typeorm");
 let CompanyClient = class CompanyClient {
 };
@@ -102,6 +103,10 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], CompanyClient.prototype, "domain", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ default: types_1.Language.ES }),
+    __metadata("design:type", String)
+], CompanyClient.prototype, "Language", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)

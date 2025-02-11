@@ -1,4 +1,4 @@
-import { PhoneNumber } from "../types";
+import { Language, PhoneNumber } from "../types";
 import {
 	Entity,
 	PrimaryGeneratedColumn,
@@ -82,6 +82,9 @@ export class CompanyClient {
 		nullable: true,
 	})
 	domain: string;
+	
+	@Column({default:Language.ES})
+	Language: Language;
 
 	@UpdateDateColumn()
 	updated_at: Date;
