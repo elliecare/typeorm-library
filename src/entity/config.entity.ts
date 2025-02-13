@@ -10,8 +10,6 @@ import {
 	DeleteDateColumn,
 } from "typeorm";
 import { User } from "./user.entity";
-import { Language } from "../types";
-
 @Entity()
 @Unique(["user"])
 export class Config {
@@ -63,9 +61,6 @@ export class Config {
 
 	@Column({ default: 900000 })
 	location_service_update_interval: number;
-
-	@Column({default:Language.ES})
-	Language: Language;
 
 	@CreateDateColumn()
 	created_at: Date;

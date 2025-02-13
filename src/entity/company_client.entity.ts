@@ -83,8 +83,8 @@ export class CompanyClient {
 	})
 	domain: string;
 	
-	@Column({default:Language.ES})
-	Language: Language;
+	@Column({default:Language.EN})
+	language: Language;
 
 	@UpdateDateColumn()
 	updated_at: Date;

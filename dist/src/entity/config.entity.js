@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Config = void 0;
 const typeorm_1 = require("typeorm");
 const user_entity_1 = require("./user.entity");
-const types_1 = require("../types");
 let Config = class Config {
     getUnlockedData(input) {
         const _data = {
@@ -104,10 +103,6 @@ __decorate([
     (0, typeorm_1.Column)({ default: 900000 }),
     __metadata("design:type", Number)
 ], Config.prototype, "location_service_update_interval", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ default: types_1.Language.ES }),
-    __metadata("design:type", String)
-], Config.prototype, "Language", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

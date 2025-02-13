@@ -104,9 +104,9 @@ __decorate([
     __metadata("design:type", String)
 ], CompanyClient.prototype, "domain", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: types_1.Language.ES }),
+    (0, typeorm_1.Column)({ default: types_1.Language.EN }),
     __metadata("design:type", String)
-], CompanyClient.prototype, "Language", void 0);
+], CompanyClient.prototype, "language", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
