@@ -43,6 +43,7 @@ import {Users_smartwatches_audit} from './src/entity/user_smartwatch_audit.entit
 import {CompanyClient} from './src/entity/company_client.entity';
 import {Alert_audit} from './src/entity/alert_audit.entity';
 import { PasswordResetToken } from './src/entity/password_reset_token.entity';
+import {PhoneLine} from './src/entity/phone_line.entity';
 
 
 export const Entities = [PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
@@ -92,3 +93,4 @@ export { Users_smartwatches_audit };
 export { CompanyClient };
 export { Steps };
 export { PasswordResetToken };
+export {PhoneLine };
