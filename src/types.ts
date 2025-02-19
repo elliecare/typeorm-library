@@ -310,7 +310,7 @@ export interface PhoneNumber {
 	country_code: string;
 	number: string;
 	area_code?: number;
-	provider?: LineProviders;
+	provider?: LineProviders | string;
 	country_name?: string;
 }
 
