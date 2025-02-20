@@ -1,4 +1,4 @@
-// User ElliGo
+//User ElliGo
 
 export enum UserRole {
 	ADMIN = "admin",
