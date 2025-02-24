@@ -310,7 +310,7 @@ export interface PhoneNumber {
 	country_code: string;
 	number: string;
 	area_code?: number;
-	provider?: LineProviders;
+	provider?: LineProviders | string;
 	country_name?: string;
 }
 
@@ -488,4 +488,9 @@ export enum DiscountCodeType {
 	PERCENTAGE = "percentage",
 	AMOUNT = "amount",
 	FREETRIAL = "free_trial",
+}
+
+export enum Language {
+	ES = "Spanish",
+	EN = "English",
 }

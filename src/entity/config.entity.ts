@@ -10,7 +10,6 @@ import {
 	DeleteDateColumn,
 } from "typeorm";
 import { User } from "./user.entity";
-
 @Entity()
 @Unique(["user"])
 export class Config {
