@@ -1,5 +1,5 @@
 "use strict";
-// User ElliGo
+//User ElliGo
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SubscriptionStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
 exports.textNormalizer = textNormalizer;
