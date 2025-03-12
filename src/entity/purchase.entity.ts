@@ -97,6 +97,9 @@ export class Purchase {
 	@Column({ default: false })
 	delivered: boolean;
 
+	@Column({ default: false })
+	in_trial: boolean;
+
 	@Column()
 	vendor: string;
 
