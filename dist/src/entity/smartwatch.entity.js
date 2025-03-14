@@ -109,6 +109,10 @@ __decorate([
     __metadata("design:type", config_entity_1.Config)
 ], Smartwatch.prototype, "config", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ default: false }),
+    __metadata("design:type", Boolean)
+], Smartwatch.prototype, "out_of_date", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], Smartwatch.prototype, "created_at", void 0);

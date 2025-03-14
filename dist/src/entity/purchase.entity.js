@@ -128,6 +128,10 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Purchase.prototype, "delivered", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ default: false }),
+    __metadata("design:type", Boolean)
+], Purchase.prototype, "in_trial", void 0);
+__decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Purchase.prototype, "vendor", void 0);

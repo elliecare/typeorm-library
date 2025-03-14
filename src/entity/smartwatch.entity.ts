@@ -97,6 +97,9 @@ export class Smartwatch {
 	@JoinColumn({ name: "config_id" })
 	config: Config;
 
+	@Column({ default: false })
+	out_of_date: boolean;
+
 	@CreateDateColumn()
 	created_at: Date;
 
