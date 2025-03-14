@@ -11,6 +11,7 @@ import {
 } from "typeorm";
 import {
 	GenderType,
+	Language,
 	PhoneNumber
 } from "../types";
 import { Alert } from "./alert.entity";
@@ -165,6 +166,9 @@ export class User {
 		nullable: true,
 	})
 	location_home: {lat:number,lng:number};
+
+	@Column({nullable:true})
+	language:Language;
 
 	@CreateDateColumn()
 	created_at: Date;

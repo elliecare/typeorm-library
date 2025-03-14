@@ -1,7 +1,7 @@
 "use strict";
 // User ElliGo
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SubscriptionStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
+exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SubscriptionStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
 exports.textNormalizer = textNormalizer;
 var UserRole;
 (function (UserRole) {
@@ -328,4 +328,9 @@ var DiscountCodeType;
     DiscountCodeType["AMOUNT"] = "amount";
     DiscountCodeType["FREETRIAL"] = "free_trial";
 })(DiscountCodeType || (exports.DiscountCodeType = DiscountCodeType = {}));
+var Language;
+(function (Language) {
+    Language["ES"] = "Spanish";
+    Language["EN"] = "English";
+})(Language || (exports.Language = Language = {}));
 //# sourceMappingURL=types.js.map
