@@ -123,6 +123,8 @@ export enum EventType {
 	OFF_BODY = "off_body",
 	STEPS = "steps",
 	LOW_BATTERY = "low_battery",
+	WIFI_CONNECTED = "wifi_connected",
+	BATTERY_CHARGING="battery_charging",
 	HR_ABOVE_BASELINE = "hr_above_baseline",
 	HR_BELOW_BASELINE = "hr_below_baseline",
 }

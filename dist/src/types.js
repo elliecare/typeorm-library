@@ -104,6 +104,8 @@ var EventType;
     EventType["OFF_BODY"] = "off_body";
     EventType["STEPS"] = "steps";
     EventType["LOW_BATTERY"] = "low_battery";
+    EventType["WIFI_CONNECTED"] = "wifi_connected";
+    EventType["BATTERY_CHARGING"] = "battery_charging";
     EventType["HR_ABOVE_BASELINE"] = "hr_above_baseline";
     EventType["HR_BELOW_BASELINE"] = "hr_below_baseline";
 })(EventType || (exports.EventType = EventType = {}));
