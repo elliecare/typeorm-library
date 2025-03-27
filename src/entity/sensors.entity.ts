@@ -66,6 +66,12 @@ export class Sensors {
 	@Column({nullable:true})
 	heart_rate_updated_at: Date;
 
+	@Column({nullable:true})
+	wifi_connected: boolean;
+
+	@Column({nullable:true})
+	wifi_connected_updated_at: Date;
+
 	@UpdateDateColumn()
 	updated_at: Date;
 }
