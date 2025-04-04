@@ -59,6 +59,13 @@ __decorate([
     __metadata("design:type", Date)
 ], Sensors.prototype, "battery_plugged_updated_at", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        type: "jsonb",
+        default: { patient_notified: false, main_companion_notified: false }
+    }),
+    __metadata("design:type", Object)
+], Sensors.prototype, "low_battery", void 0);
+__decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Sensors.prototype, "app_version", void 0);
