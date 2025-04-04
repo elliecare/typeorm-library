@@ -4,6 +4,7 @@ import {
 	Column,
 	UpdateDateColumn,
 } from "typeorm";
+import { LowBatteryNotification } from "../types";
 
 @Entity()
 export class Sensors {
@@ -41,6 +42,12 @@ export class Sensors {
 
 	@Column({nullable:true})
 	battery_plugged_updated_at: Date;
+
+	@Column({
+		type: "jsonb",
+		default:{patient_notified:false, main_companion_notified:false}
+	})
+	low_battery: LowBatteryNotification;
 
 	@Column()
 	app_version: string;
