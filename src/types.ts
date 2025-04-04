@@ -25,6 +25,11 @@ export enum SubscriptionStatus {
 	ACTIVE = "active",
 	PAUSE = "pause",
 }
+
+export interface LowBatteryNotification {
+	patient_notified: boolean;
+	main_companion_notified: boolean;
+}
 // Devices
 
 export interface RawDevice {
