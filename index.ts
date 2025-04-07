@@ -137,4 +137,3 @@ export { Assessment };
 export { CanaryModule };
 export { CanaryModule_audit };
 export { CanaryData };
-export { FallThresholdFactorAIModelEntity };
