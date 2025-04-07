@@ -21,9 +21,11 @@ export enum PlanType {
 	COMPANY_CLIENT = "company_client",
 }
 
-export enum SubscriptionStatus {
+export enum SupportNetworkStatus {
 	ACTIVE = "active",
 	PAUSE = "pause",
+	EXPIRED = "expired",
+	DELETED = "deleted",
 }
 
 export interface LowBatteryNotification {
