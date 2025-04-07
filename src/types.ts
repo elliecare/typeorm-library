@@ -21,9 +21,16 @@ export enum PlanType {
 	COMPANY_CLIENT = "company_client",
 }
 
-export enum SubscriptionStatus {
+export enum SupportNetworkStatus {
 	ACTIVE = "active",
 	PAUSE = "pause",
+	EXPIRED = "expired",
+	DELETED = "deleted",
+}
+
+export interface LowBatteryNotification {
+	patient_notified: boolean;
+	main_companion_notified: boolean;
 }
 
 export interface LowBatteryNotification {
@@ -128,6 +135,8 @@ export enum EventType {
 	OFF_BODY = "off_body",
 	STEPS = "steps",
 	LOW_BATTERY = "low_battery",
+	WIFI_CONNECTED = "wifi_connected",
+	BATTERY_CHARGING="battery_charging",
 	HR_ABOVE_BASELINE = "hr_above_baseline",
 	HR_BELOW_BASELINE = "hr_below_baseline",
 }

@@ -1,7 +1,7 @@
 "use strict";
 //User ElliGo
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SubscriptionStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
+exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SupportNetworkStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
 exports.textNormalizer = textNormalizer;
 var UserRole;
 (function (UserRole) {
@@ -23,11 +23,13 @@ var PlanType;
     PlanType["GOLD"] = "gold";
     PlanType["COMPANY_CLIENT"] = "company_client";
 })(PlanType || (exports.PlanType = PlanType = {}));
-var SubscriptionStatus;
-(function (SubscriptionStatus) {
-    SubscriptionStatus["ACTIVE"] = "active";
-    SubscriptionStatus["PAUSE"] = "pause";
-})(SubscriptionStatus || (exports.SubscriptionStatus = SubscriptionStatus = {}));
+var SupportNetworkStatus;
+(function (SupportNetworkStatus) {
+    SupportNetworkStatus["ACTIVE"] = "active";
+    SupportNetworkStatus["PAUSE"] = "pause";
+    SupportNetworkStatus["EXPIRED"] = "expired";
+    SupportNetworkStatus["DELETED"] = "deleted";
+})(SupportNetworkStatus || (exports.SupportNetworkStatus = SupportNetworkStatus = {}));
 var DeviceType;
 (function (DeviceType) {
     DeviceType["WATCH"] = "watch";
@@ -104,6 +106,8 @@ var EventType;
     EventType["OFF_BODY"] = "off_body";
     EventType["STEPS"] = "steps";
     EventType["LOW_BATTERY"] = "low_battery";
+    EventType["WIFI_CONNECTED"] = "wifi_connected";
+    EventType["BATTERY_CHARGING"] = "battery_charging";
     EventType["HR_ABOVE_BASELINE"] = "hr_above_baseline";
     EventType["HR_BELOW_BASELINE"] = "hr_below_baseline";
 })(EventType || (exports.EventType = EventType = {}));
