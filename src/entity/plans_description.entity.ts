@@ -26,11 +26,11 @@ export class PlansDescription {
 	@Column()
 	plan_price: number;
 
-	@Column({ type: "double precision", default: 0.0 })
-	watch_price: string;
+	@Column()
+	watch_price: number;
 
-	@Column({ type: "double precision", default: 0.0 })
-	setup_price: string;
+	@Column({ default: "Sin Tiempo" })
+	permanence_time: string;
 
 	@Column({
 		type: "jsonb",
