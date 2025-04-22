@@ -64,6 +64,7 @@ export enum DeviceStatus {
 
 export enum SmartwatchStatus {
 	VIRGIN = "virgin",
+	RECOVERED = "recovered",
 	STOCKED = "stocked",
 	INPROGRESS = "in_progress",
 	READYTOSEND = "ready_to_send",

@@ -46,6 +46,7 @@ var DeviceStatus;
 var SmartwatchStatus;
 (function (SmartwatchStatus) {
     SmartwatchStatus["VIRGIN"] = "virgin";
+    SmartwatchStatus["RECOVERED"] = "recovered";
     SmartwatchStatus["STOCKED"] = "stocked";
     SmartwatchStatus["INPROGRESS"] = "in_progress";
     SmartwatchStatus["READYTOSEND"] = "ready_to_send";
