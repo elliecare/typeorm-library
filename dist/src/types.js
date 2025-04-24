@@ -28,6 +28,7 @@ var SupportNetworkStatus;
     SupportNetworkStatus["ACTIVE"] = "active";
     SupportNetworkStatus["PAUSE"] = "pause";
     SupportNetworkStatus["EXPIRED"] = "expired";
+    SupportNetworkStatus["DEACTIVE"] = "deactive";
     SupportNetworkStatus["DELETED"] = "deleted";
 })(SupportNetworkStatus || (exports.SupportNetworkStatus = SupportNetworkStatus = {}));
 var DeviceType;

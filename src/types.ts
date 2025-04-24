@@ -25,9 +25,9 @@ export enum SupportNetworkStatus {
 	ACTIVE = "active",
 	PAUSE = "pause",
 	EXPIRED = "expired",
+	DEACTIVE = "deactive",
 	DELETED = "deleted",
 }
-
 export interface LowBatteryNotification {
 	patient_notified: boolean;
 	main_companion_notified: boolean;
