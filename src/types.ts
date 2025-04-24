@@ -25,6 +25,7 @@ export enum SupportNetworkStatus {
 	ACTIVE = "active",
 	PAUSE = "pause",
 	EXPIRED = "expired",
+	DEACTIVE = "deactive",
 	DELETED = "deleted",
 }
 
