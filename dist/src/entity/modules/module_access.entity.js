@@ -22,9 +22,9 @@ __decorate([
 ], CompanyClientModuleAccess.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, client => client.id),
-    (0, typeorm_1.JoinColumn)(),
+    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
     __metadata("design:type", company_client_entity_1.CompanyClient)
-], CompanyClientModuleAccess.prototype, "companyClient", void 0);
+], CompanyClientModuleAccess.prototype, "company_client", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)

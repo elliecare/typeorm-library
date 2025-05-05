@@ -5,12 +5,19 @@ import {
 	Column,
 	UpdateDateColumn,
 	DeleteDateColumn,
+	ManyToOne,
+	JoinColumn,
 } from "typeorm";
+import { CompanyClient } from "../company_client.entity";
 
 @Entity()
 export class WhatsappModule {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
+
+	@ManyToOne(() => CompanyClient, client => client.id)
+	@JoinColumn({ name: "company_client_id" })
+	company_client: CompanyClient;
 
 	@Column({
 		nullable: true,

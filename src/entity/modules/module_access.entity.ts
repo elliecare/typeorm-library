@@ -8,8 +8,8 @@ export class CompanyClientModuleAccess {
 	id: string;
 
 	@ManyToOne(() => CompanyClient, client => client.id)
-	@JoinColumn()
-	companyClient: CompanyClient;
+	@JoinColumn({ name: "company_client_id" })
+	company_client: CompanyClient;
 
 	@Column()
 	module: Modules
