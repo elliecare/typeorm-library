@@ -509,3 +509,8 @@ export enum Language {
 	ES = "Spanish",
 	EN = "English",
 }
+
+export enum Modules {
+	CONNECT = "Connect",
+	WHATSAPP = "Whatsapp",
+}
