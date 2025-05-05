@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConnectModule = void 0;
 const typeorm_1 = require("typeorm");
+const company_client_entity_1 = require("../company_client.entity");
 let ConnectModule = class ConnectModule {
 };
 exports.ConnectModule = ConnectModule;
@@ -18,6 +19,11 @@ __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
 ], ConnectModule.prototype, "id", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, client => client.id),
+    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
+    __metadata("design:type", company_client_entity_1.CompanyClient)
+], ConnectModule.prototype, "company_client", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: Boolean,
