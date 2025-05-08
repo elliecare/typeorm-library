@@ -71,6 +71,21 @@ __decorate([
 ], ConnectModule.prototype, "timeout_redial", void 0);
 __decorate([
     (0, typeorm_1.Column)({
+        type: "bigint",
+        nullable: true,
+        default: 12000
+    }),
+    __metadata("design:type", Number)
+], ConnectModule.prototype, "timeout_holding", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "jsonb",
+        nullable: true,
+    }),
+    __metadata("design:type", Object)
+], ConnectModule.prototype, "phone_number", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
         type: "jsonb",
         nullable: true,
     }),

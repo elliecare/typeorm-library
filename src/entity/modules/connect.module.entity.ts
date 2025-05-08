@@ -56,6 +56,19 @@ export class ConnectModule {
 		nullable: true,
 	})
 	timeout_redial: number;
+
+	@Column({
+		type: "bigint",
+		nullable: true,
+		default:12000
+	})
+	timeout_holding: number;
+
+	@Column({
+		type: "jsonb",
+		nullable: true,
+	})
+	phone_number: PhoneNumber;
 	//@TODO revisar si esto funciona como corresponde
 	@Column({
 		type: "jsonb",
