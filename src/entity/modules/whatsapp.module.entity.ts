@@ -22,8 +22,18 @@ export class WhatsappModule {
 	@Column({
 		nullable: true,
 	})
-	api_token: string;
+	wa_version: string;
 
+	@Column({
+		nullable: true,
+	})
+	sender_phone_number_id: string;
+
+	@Column({
+		nullable: true,
+	})
+	api_token: string;
+	
 	@Column({
 		type: "jsonb",
 		nullable: true,

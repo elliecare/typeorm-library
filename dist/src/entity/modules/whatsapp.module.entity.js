@@ -29,6 +29,18 @@ __decorate([
         nullable: true,
     }),
     __metadata("design:type", String)
+], WhatsappModule.prototype, "wa_version", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", String)
+], WhatsappModule.prototype, "sender_phone_number_id", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", String)
 ], WhatsappModule.prototype, "api_token", void 0);
 __decorate([
     (0, typeorm_1.Column)({
