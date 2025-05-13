@@ -27,6 +27,9 @@ export class UserSmartwatch {
 	@Column({ length: 3, nullable: true })
 	code: string;
 
+	@Column({ nullable: true })
+	fcm_token: string;
+
 	@CreateDateColumn()
 	created_at: Date;
 

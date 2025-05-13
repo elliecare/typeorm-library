@@ -29,11 +29,19 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({
         type: "enum",
-        enum: types_1.SubscriptionStatus,
-        default: types_1.SubscriptionStatus.ACTIVE,
+        enum: types_1.SupportNetworkStatus,
+        default: types_1.SupportNetworkStatus.ACTIVE,
     }),
     __metadata("design:type", String)
 ], SupportNetwork.prototype, "subscriptionStatus", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "enum",
+        enum: types_1.SupportNetworkStatus,
+        default: types_1.SupportNetworkStatus.ACTIVE,
+    }),
+    __metadata("design:type", String)
+], SupportNetwork.prototype, "status", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,

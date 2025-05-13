@@ -35,6 +35,10 @@ __decorate([
     __metadata("design:type", String)
 ], UserSmartwatch.prototype, "code", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], UserSmartwatch.prototype, "fcm_token", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], UserSmartwatch.prototype, "created_at", void 0);

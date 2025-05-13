@@ -9,33 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EllieCoins = void 0;
+exports.WifiConnected = void 0;
 const typeorm_1 = require("typeorm");
-const user_entity_1 = require("./user.entity");
-let EllieCoins = class EllieCoins {
+let WifiConnected = class WifiConnected {
 };
-exports.EllieCoins = EllieCoins;
+exports.WifiConnected = WifiConnected;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
-], EllieCoins.prototype, "id", void 0);
-__decorate([
-    (0, typeorm_1.ManyToOne)(() => user_entity_1.User, (user) => user.ellie_coins),
-    __metadata("design:type", user_entity_1.User)
-], EllieCoins.prototype, "user", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], EllieCoins.prototype, "amount", void 0);
+], WifiConnected.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], EllieCoins.prototype, "description", void 0);
+], WifiConnected.prototype, "device_id", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], WifiConnected.prototype, "wifi_connected", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], WifiConnected.prototype, "SSID", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], WifiConnected.prototype, "app_version", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Date)
+], WifiConnected.prototype, "created_on_device", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], EllieCoins.prototype, "created_at", void 0);
-exports.EllieCoins = EllieCoins = __decorate([
+], WifiConnected.prototype, "created_at", void 0);
+exports.WifiConnected = WifiConnected = __decorate([
     (0, typeorm_1.Entity)()
-], EllieCoins);
-//# sourceMappingURL=ellie_coins.entity.js.map
+], WifiConnected);
+//# sourceMappingURL=wifi_connected.entity.js.map

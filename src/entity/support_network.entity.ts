@@ -8,7 +8,7 @@ import {
 	OneToOne,
 	JoinColumn,
 } from "typeorm";
-import { PlanType, SubscriptionStatus } from "../types";
+import { PlanType, SupportNetworkStatus } from "../types";
 import { Smartwatch } from "./smartwatch.entity";
 
 @Entity()
@@ -23,10 +23,17 @@ export class SupportNetwork {
 
 	@Column({
 		type: "enum",
-		enum: SubscriptionStatus,
-		default: SubscriptionStatus.ACTIVE,
+		enum: SupportNetworkStatus,
+		default: SupportNetworkStatus.ACTIVE,
 	})
 	subscriptionStatus: string;
+
+	@Column({
+		type: "enum",
+		enum: SupportNetworkStatus,
+		default: SupportNetworkStatus.ACTIVE,
+	})
+	status: string;
 
 	@Column({
 		nullable: true,

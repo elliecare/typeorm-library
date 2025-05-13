@@ -98,6 +98,14 @@ __decorate([
     __metadata("design:type", Date)
 ], Sensors.prototype, "heart_rate_updated_at", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Boolean)
+], Sensors.prototype, "wifi_connected", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", Date)
+], Sensors.prototype, "wifi_connected_updated_at", void 0);
+__decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], Sensors.prototype, "updated_at", void 0);
