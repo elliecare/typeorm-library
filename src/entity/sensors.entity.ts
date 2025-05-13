@@ -3,8 +3,11 @@ import {
 	PrimaryGeneratedColumn,
 	Column,
 	UpdateDateColumn,
+	JoinColumn,
+	ManyToOne,
 } from "typeorm";
 import { LowBatteryNotification } from "../types";
+import { Smartwatch } from "./smartwatch.entity";
 
 @Entity()
 export class Sensors {
@@ -81,4 +84,8 @@ export class Sensors {
 
 	@UpdateDateColumn()
 	updated_at: Date;
+
+	@ManyToOne(() => Smartwatch, { eager: true })
+	@JoinColumn({ name: "smartwatch_id" })
+	smartwatch: Smartwatch;
 }
