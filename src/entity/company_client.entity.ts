@@ -6,6 +6,8 @@ import {
 	UpdateDateColumn,
 	DeleteDateColumn,
 } from "typeorm";
+import { WhatsappModule } from "./modules/whatsapp.module.entity";
+import { ConnectModule } from "./modules/connect.module.entity";
 
 @Entity()
 export class CompanyClient {
@@ -23,60 +25,13 @@ export class CompanyClient {
 	prefix: string;
 
 	@Column({
-		type: "jsonb",
-		nullable: true,
+    	type: "jsonb",
+    	nullable: true,
 	})
-	phone_number: PhoneNumber;
-
-	@Column({
-		type: Boolean,
-		nullable: true,
-	})
-	aws_connect: boolean;
-
-	@Column({
-		nullable: true,
-	})
-	send_url: string;
-
-	@Column({
-		nullable: true,
-	})
-	auth_url: string;
-
-	@Column({
-		nullable: true,
-	})
-	client_id: string;
-
-	@Column({
-		nullable: true,
-	})
-	client_secret: string;
-
-	@Column({
-		type: "bigint",
-		nullable: true,
-	})
-	timeout: number;
-
-	@Column({
-		type: "bigint",
-		nullable: true,
-	})
-	timeout_redial: number;
-	//@TODO revisar si esto funciona como corresponde
-	@Column({
-		type: "jsonb",
-		nullable: true,
-	})
-	support_contacts: { emails: string[]; whatsapp: PhoneNumber[] };
-
-	@Column({
-		type: "int",
-		nullable: true,
-	})
-	maximum_redial: number;
+	modules:{
+		Connect?: ConnectModule;
+		Whatsapp?: WhatsappModule;
+	};
 
 	@Column({
 		nullable: true,

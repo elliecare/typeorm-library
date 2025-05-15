@@ -37,66 +37,7 @@ __decorate([
         nullable: true,
     }),
     __metadata("design:type", Object)
-], CompanyClient.prototype, "phone_number", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: Boolean,
-        nullable: true,
-    }),
-    __metadata("design:type", Boolean)
-], CompanyClient.prototype, "aws_connect", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "send_url", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "auth_url", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "client_id", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "client_secret", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "bigint",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
-], CompanyClient.prototype, "timeout", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "bigint",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
-], CompanyClient.prototype, "timeout_redial", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
-], CompanyClient.prototype, "support_contacts", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "int",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
-], CompanyClient.prototype, "maximum_redial", void 0);
+], CompanyClient.prototype, "modules", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
