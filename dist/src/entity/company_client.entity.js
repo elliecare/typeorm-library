@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompanyClient = void 0;
 const types_1 = require("../types");
 const typeorm_1 = require("typeorm");
+const whatsapp_module_entity_1 = require("./modules/whatsapp.module.entity");
+const connect_module_entity_1 = require("./modules/connect.module.entity");
 let CompanyClient = class CompanyClient {
 };
 exports.CompanyClient = CompanyClient;
@@ -33,13 +35,6 @@ __decorate([
 ], CompanyClient.prototype, "prefix", void 0);
 __decorate([
     (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
-], CompanyClient.prototype, "modules", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
         nullable: true,
     }),
     __metadata("design:type", String)
@@ -48,6 +43,20 @@ __decorate([
     (0, typeorm_1.Column)({ default: types_1.Language.EN }),
     __metadata("design:type", String)
 ], CompanyClient.prototype, "language", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => connect_module_entity_1.ConnectModule, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)(),
+    __metadata("design:type", connect_module_entity_1.ConnectModule)
+], CompanyClient.prototype, "connectModule", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => whatsapp_module_entity_1.WhatsappModule, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)(),
+    __metadata("design:type", whatsapp_module_entity_1.WhatsappModule)
+], CompanyClient.prototype, "whatsappModule", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)(),
+    __metadata("design:type", Date)
+], CompanyClient.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)

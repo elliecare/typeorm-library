@@ -7,6 +7,7 @@ import {
 	DeleteDateColumn,
 	ManyToOne,
 	JoinColumn,
+	CreateDateColumn,
 } from "typeorm";
 import { CompanyClient } from "../company_client.entity";
 
@@ -18,6 +19,12 @@ export class ConnectModule {
 	@ManyToOne(() => CompanyClient, client => client.id)
 	@JoinColumn({ name: "company_client_id" })
 	company_client: CompanyClient;
+
+	@Column({
+		type: Boolean,
+		default: false,
+	})
+	enabled: boolean;
 
 	@Column({
 		type: Boolean,
@@ -81,6 +88,9 @@ export class ConnectModule {
 		nullable: true,
 	})
 	maximum_redial: number;
+
+	@CreateDateColumn()
+	created_at: Date;
 
 	@UpdateDateColumn()
 	updated_at: Date;
