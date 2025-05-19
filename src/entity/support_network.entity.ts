@@ -7,9 +7,11 @@ import {
 	DeleteDateColumn,
 	OneToOne,
 	JoinColumn,
+	ManyToOne,
 } from "typeorm";
 import { PlanType, SupportNetworkStatus } from "../types";
 import { Smartwatch } from "./smartwatch.entity";
+import { CompanyClient } from "./company_client.entity";
 
 @Entity()
 export class SupportNetwork {
@@ -59,15 +61,6 @@ export class SupportNetwork {
 	})
 	plan_type: string;
 
-	@CreateDateColumn()
-	created_at: Date;
-
-	@UpdateDateColumn()
-	updated_at: Date;
-
-	@DeleteDateColumn()
-	deleted_at: Date;
-
 	@Column({
 		nullable: true,
 	})
@@ -95,4 +88,17 @@ export class SupportNetwork {
 
 	@Column({ default: null })
 	url_agree_show_location: string;
+
+	@ManyToOne(() => CompanyClient)
+	@JoinColumn({ name: "company_client_id" })
+	company_client: CompanyClient;
+
+	@CreateDateColumn()
+	created_at: Date;
+
+	@UpdateDateColumn()
+	updated_at: Date;
+
+	@DeleteDateColumn()
+	deleted_at: Date;
 }
