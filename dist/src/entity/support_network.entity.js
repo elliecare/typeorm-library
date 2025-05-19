@@ -13,6 +13,7 @@ exports.SupportNetwork = void 0;
 const typeorm_1 = require("typeorm");
 const types_1 = require("../types");
 const smartwatch_entity_1 = require("./smartwatch.entity");
+const company_client_entity_1 = require("./company_client.entity");
 let SupportNetwork = class SupportNetwork {
 };
 exports.SupportNetwork = SupportNetwork;
@@ -71,18 +72,6 @@ __decorate([
     __metadata("design:type", String)
 ], SupportNetwork.prototype, "plan_type", void 0);
 __decorate([
-    (0, typeorm_1.CreateDateColumn)(),
-    __metadata("design:type", Date)
-], SupportNetwork.prototype, "created_at", void 0);
-__decorate([
-    (0, typeorm_1.UpdateDateColumn)(),
-    __metadata("design:type", Date)
-], SupportNetwork.prototype, "updated_at", void 0);
-__decorate([
-    (0, typeorm_1.DeleteDateColumn)(),
-    __metadata("design:type", Date)
-], SupportNetwork.prototype, "deleted_at", void 0);
-__decorate([
     (0, typeorm_1.Column)({
         nullable: true,
     }),
@@ -117,6 +106,23 @@ __decorate([
     (0, typeorm_1.Column)({ default: null }),
     __metadata("design:type", String)
 ], SupportNetwork.prototype, "url_agree_show_location", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient),
+    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
+    __metadata("design:type", company_client_entity_1.CompanyClient)
+], SupportNetwork.prototype, "company_client", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)(),
+    __metadata("design:type", Date)
+], SupportNetwork.prototype, "created_at", void 0);
+__decorate([
+    (0, typeorm_1.UpdateDateColumn)(),
+    __metadata("design:type", Date)
+], SupportNetwork.prototype, "updated_at", void 0);
+__decorate([
+    (0, typeorm_1.DeleteDateColumn)(),
+    __metadata("design:type", Date)
+], SupportNetwork.prototype, "deleted_at", void 0);
 exports.SupportNetwork = SupportNetwork = __decorate([
     (0, typeorm_1.Entity)()
 ], SupportNetwork);
