@@ -20,13 +20,13 @@ export class WhatsappModule_audit {
 
 	@ManyToOne(() => WhatsappModule)
 	@JoinColumn({ name: "whatsapp_module_id" })
-	WhatsappModule: WhatsappModule;
+	whatsappModule: WhatsappModule;
 
 	@Column({
 		type: "jsonb",
 		nullable: true,
 	})
-	WhatsappModule_snapshot: WhatsappModule;
+	whatsappModule_snapshot: WhatsappModule;
 
 	@Column({ nullable: true })
 	observations: string;

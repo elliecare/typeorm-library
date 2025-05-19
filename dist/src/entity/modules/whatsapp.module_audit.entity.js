@@ -29,14 +29,14 @@ __decorate([
     (0, typeorm_1.ManyToOne)(() => whatsapp_module_entity_1.WhatsappModule),
     (0, typeorm_1.JoinColumn)({ name: "whatsapp_module_id" }),
     __metadata("design:type", whatsapp_module_entity_1.WhatsappModule)
-], WhatsappModule_audit.prototype, "WhatsappModule", void 0);
+], WhatsappModule_audit.prototype, "whatsappModule", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "jsonb",
         nullable: true,
     }),
     __metadata("design:type", whatsapp_module_entity_1.WhatsappModule)
-], WhatsappModule_audit.prototype, "WhatsappModule_snapshot", void 0);
+], WhatsappModule_audit.prototype, "whatsappModule_snapshot", void 0);
 __decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
