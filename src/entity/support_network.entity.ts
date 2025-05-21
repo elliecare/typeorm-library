@@ -35,7 +35,7 @@ export class SupportNetwork {
 		enum: SupportNetworkStatus,
 		default: SupportNetworkStatus.ACTIVE,
 	})
-	status: string;
+	status: SupportNetworkStatus;
 
 	@Column({
 		nullable: true,
