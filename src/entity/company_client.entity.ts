@@ -1,11 +1,16 @@
-import { Language, PhoneNumber } from "../types";
+import { Language } from "../types";
 import {
 	Entity,
 	PrimaryGeneratedColumn,
 	Column,
 	UpdateDateColumn,
 	DeleteDateColumn,
+	OneToOne,
+	JoinColumn,
+	CreateDateColumn,
 } from "typeorm";
+import { WhatsappModule } from "./modules/whatsapp.module.entity";
+import { ConnectModule } from "./modules/connect.module.entity";
 
 @Entity()
 export class CompanyClient {
@@ -23,68 +28,23 @@ export class CompanyClient {
 	prefix: string;
 
 	@Column({
-		type: "jsonb",
-		nullable: true,
-	})
-	phone_number: PhoneNumber;
-
-	@Column({
-		type: Boolean,
-		nullable: true,
-	})
-	aws_connect: boolean;
-
-	@Column({
-		nullable: true,
-	})
-	send_url: string;
-
-	@Column({
-		nullable: true,
-	})
-	auth_url: string;
-
-	@Column({
-		nullable: true,
-	})
-	client_id: string;
-
-	@Column({
-		nullable: true,
-	})
-	client_secret: string;
-
-	@Column({
-		type: "bigint",
-		nullable: true,
-	})
-	timeout: number;
-
-	@Column({
-		type: "bigint",
-		nullable: true,
-	})
-	timeout_redial: number;
-	//@TODO revisar si esto funciona como corresponde
-	@Column({
-		type: "jsonb",
-		nullable: true,
-	})
-	support_contacts: { emails: string[]; whatsapp: PhoneNumber[] };
-
-	@Column({
-		type: "int",
-		nullable: true,
-	})
-	maximum_redial: number;
-
-	@Column({
 		nullable: true,
 	})
 	domain: string;
 	
 	@Column({default:Language.EN})
 	language: Language;
+
+	@OneToOne(() => ConnectModule, { eager: true, nullable: true })
+	@JoinColumn()
+	connectModule?: ConnectModule;
+
+	@OneToOne(() => WhatsappModule, { eager: true, nullable: true })
+	@JoinColumn()
+	whatsappModule?: WhatsappModule;
+
+	@CreateDateColumn()
+	created_at: Date;
 
 	@UpdateDateColumn()
 	updated_at: Date;

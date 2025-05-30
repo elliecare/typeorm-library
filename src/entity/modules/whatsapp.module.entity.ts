@@ -7,6 +7,7 @@ import {
 	DeleteDateColumn,
 	ManyToOne,
 	JoinColumn,
+	CreateDateColumn,
 } from "typeorm";
 import { CompanyClient } from "../company_client.entity";
 
@@ -15,9 +16,11 @@ export class WhatsappModule {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
 
-	@ManyToOne(() => CompanyClient, client => client.id)
-	@JoinColumn({ name: "company_client_id" })
-	company_client: CompanyClient;
+	@Column({
+		type: Boolean,
+		default: false,
+	})
+	enabled: boolean;
 
 	@Column({
 		nullable: true,
@@ -39,6 +42,13 @@ export class WhatsappModule {
 		nullable: true,
 	})
 	phone_number: PhoneNumber;
+
+	@ManyToOne(() => CompanyClient, client => client.id)
+	@JoinColumn({ name: "company_client_id" })
+	company_client: CompanyClient;
+
+	@CreateDateColumn()
+	created_at: Date;
 
 	@UpdateDateColumn()
 	updated_at: Date;

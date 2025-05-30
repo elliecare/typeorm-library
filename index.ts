@@ -48,10 +48,12 @@ import {WifiConnected} from './src/entity/wifi_connected.entity';
 import {Sensors_audit} from './src/entity/sensors_audit.entity';
 import { ConnectModule } from './src/entity/modules/connect.module.entity';
 import { WhatsappModule } from './src/entity/modules/whatsapp.module.entity';
-import { CompanyClientModuleAccess } from './src/entity/modules/module_access.entity';
+import { Company_client_audit } from './src/entity/company_client_audit.entity';
 import { StaticToken } from './src/entity/static_token.entity';
+import { ConnectModule_audit } from './src/entity/modules/connect.module_audit.entity';
+import { WhatsappModule_audit } from './src/entity/modules/whatsapp.module_audit.entity';
 
-export const Entities = [StaticToken, CompanyClientModuleAccess, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
+export const Entities = [StaticToken, ConnectModule_audit, WhatsappModule_audit, Company_client_audit, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
 
 export { Plans };
 export { PatientAgentContact };
@@ -103,5 +105,7 @@ export { WifiConnected };
 export { Sensors_audit };
 export { ConnectModule };
 export { WhatsappModule };
-export { CompanyClientModuleAccess };
+export { Company_client_audit };
+export { ConnectModule_audit };
+export { WhatsappModule_audit };
 export { StaticToken };

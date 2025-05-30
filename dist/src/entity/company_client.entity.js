@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CompanyClient = void 0;
 const types_1 = require("../types");
 const typeorm_1 = require("typeorm");
+const whatsapp_module_entity_1 = require("./modules/whatsapp.module.entity");
+const connect_module_entity_1 = require("./modules/connect.module.entity");
 let CompanyClient = class CompanyClient {
 };
 exports.CompanyClient = CompanyClient;
@@ -33,72 +35,6 @@ __decorate([
 ], CompanyClient.prototype, "prefix", void 0);
 __decorate([
     (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
-], CompanyClient.prototype, "phone_number", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: Boolean,
-        nullable: true,
-    }),
-    __metadata("design:type", Boolean)
-], CompanyClient.prototype, "aws_connect", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "send_url", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "auth_url", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "client_id", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        nullable: true,
-    }),
-    __metadata("design:type", String)
-], CompanyClient.prototype, "client_secret", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "bigint",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
-], CompanyClient.prototype, "timeout", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "bigint",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
-], CompanyClient.prototype, "timeout_redial", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
-], CompanyClient.prototype, "support_contacts", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "int",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
-], CompanyClient.prototype, "maximum_redial", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
         nullable: true,
     }),
     __metadata("design:type", String)
@@ -107,6 +43,20 @@ __decorate([
     (0, typeorm_1.Column)({ default: types_1.Language.EN }),
     __metadata("design:type", String)
 ], CompanyClient.prototype, "language", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => connect_module_entity_1.ConnectModule, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)(),
+    __metadata("design:type", connect_module_entity_1.ConnectModule)
+], CompanyClient.prototype, "connectModule", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => whatsapp_module_entity_1.WhatsappModule, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)(),
+    __metadata("design:type", whatsapp_module_entity_1.WhatsappModule)
+], CompanyClient.prototype, "whatsappModule", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)(),
+    __metadata("design:type", Date)
+], CompanyClient.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)

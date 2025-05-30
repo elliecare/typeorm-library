@@ -20,10 +20,12 @@ __decorate([
     __metadata("design:type", String)
 ], WhatsappModule.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, client => client.id),
-    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
-    __metadata("design:type", company_client_entity_1.CompanyClient)
-], WhatsappModule.prototype, "company_client", void 0);
+    (0, typeorm_1.Column)({
+        type: Boolean,
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], WhatsappModule.prototype, "enabled", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
@@ -49,6 +51,15 @@ __decorate([
     }),
     __metadata("design:type", Object)
 ], WhatsappModule.prototype, "phone_number", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, client => client.id),
+    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
+    __metadata("design:type", company_client_entity_1.CompanyClient)
+], WhatsappModule.prototype, "company_client", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)(),
+    __metadata("design:type", Date)
+], WhatsappModule.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)

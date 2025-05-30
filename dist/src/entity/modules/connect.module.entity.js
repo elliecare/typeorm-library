@@ -27,6 +27,13 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({
         type: Boolean,
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], ConnectModule.prototype, "enabled", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: Boolean,
         nullable: true,
     }),
     __metadata("design:type", Boolean)
@@ -98,6 +105,10 @@ __decorate([
     }),
     __metadata("design:type", Number)
 ], ConnectModule.prototype, "maximum_redial", void 0);
+__decorate([
+    (0, typeorm_1.CreateDateColumn)(),
+    __metadata("design:type", Date)
+], ConnectModule.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
