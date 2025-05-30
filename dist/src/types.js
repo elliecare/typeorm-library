@@ -1,7 +1,7 @@
 "use strict";
 //User ElliGo
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SupportNetworkStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
+exports.Modules = exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SupportNetworkStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
 exports.textNormalizer = textNormalizer;
 var UserRole;
 (function (UserRole) {
@@ -47,6 +47,7 @@ var DeviceStatus;
 var SmartwatchStatus;
 (function (SmartwatchStatus) {
     SmartwatchStatus["VIRGIN"] = "virgin";
+    SmartwatchStatus["RECOVERED"] = "recovered";
     SmartwatchStatus["STOCKED"] = "stocked";
     SmartwatchStatus["INPROGRESS"] = "in_progress";
     SmartwatchStatus["READYTOSEND"] = "ready_to_send";
@@ -338,4 +339,9 @@ var Language;
     Language["ES"] = "Spanish";
     Language["EN"] = "English";
 })(Language || (exports.Language = Language = {}));
+var Modules;
+(function (Modules) {
+    Modules["CONNECT"] = "Connect";
+    Modules["WHATSAPP"] = "Whatsapp";
+})(Modules || (exports.Modules = Modules = {}));
 //# sourceMappingURL=types.js.map

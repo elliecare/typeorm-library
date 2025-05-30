@@ -35,13 +35,13 @@ __decorate([
     __metadata("design:type", Number)
 ], PlansDescription.prototype, "plan_price", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
+    (0, typeorm_1.Column)({ type: "double precision", default: 0.0 }),
+    __metadata("design:type", String)
 ], PlansDescription.prototype, "watch_price", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "Sin Tiempo" }),
+    (0, typeorm_1.Column)({ type: "double precision", default: 0.0 }),
     __metadata("design:type", String)
-], PlansDescription.prototype, "permanence_time", void 0);
+], PlansDescription.prototype, "setup_price", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "jsonb",

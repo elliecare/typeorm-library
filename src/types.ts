@@ -28,7 +28,6 @@ export enum SupportNetworkStatus {
 	DEACTIVE = "deactive",
 	DELETED = "deleted",
 }
-
 export interface LowBatteryNotification {
 	patient_notified: boolean;
 	main_companion_notified: boolean;
@@ -70,6 +69,7 @@ export enum DeviceStatus {
 
 export enum SmartwatchStatus {
 	VIRGIN = "virgin",
+	RECOVERED = "recovered",
 	STOCKED = "stocked",
 	INPROGRESS = "in_progress",
 	READYTOSEND = "ready_to_send",
@@ -513,4 +513,9 @@ export enum DiscountCodeType {
 export enum Language {
 	ES = "Spanish",
 	EN = "English",
+}
+
+export enum Modules {
+	CONNECT = "Connect",
+	WHATSAPP = "Whatsapp",
 }

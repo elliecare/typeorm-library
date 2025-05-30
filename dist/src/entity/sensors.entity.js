@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sensors = void 0;
 const typeorm_1 = require("typeorm");
+const smartwatch_entity_1 = require("./smartwatch.entity");
 let Sensors = class Sensors {
 };
 exports.Sensors = Sensors;
@@ -109,6 +110,11 @@ __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], Sensors.prototype, "updated_at", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => smartwatch_entity_1.Smartwatch, { eager: true }),
+    (0, typeorm_1.JoinColumn)({ name: "smartwatch_id" }),
+    __metadata("design:type", smartwatch_entity_1.Smartwatch)
+], Sensors.prototype, "smartwatch", void 0);
 exports.Sensors = Sensors = __decorate([
     (0, typeorm_1.Entity)()
 ], Sensors);
