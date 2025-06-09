@@ -11,6 +11,8 @@ import {
 } from "typeorm";
 import { WhatsappModule } from "./modules/whatsapp.module.entity";
 import { ConnectModule } from "./modules/connect.module.entity";
+import { MailingModule } from "./modules/mailing.module.entity";
+import { CommercialModule } from "./modules/commercial.module.entity";
 
 @Entity()
 export class CompanyClient {
@@ -42,6 +44,14 @@ export class CompanyClient {
 	@OneToOne(() => WhatsappModule, { eager: true, nullable: true })
 	@JoinColumn()
 	whatsappModule?: WhatsappModule;
+
+	@OneToOne(() => MailingModule, { eager: true, nullable: true })
+	@JoinColumn()
+	mailingModule?: MailingModule;
+
+	@OneToOne(() => CommercialModule, { eager: true, nullable: true })
+	@JoinColumn()
+	commercialModule?: CommercialModule;
 
 	@CreateDateColumn()
 	created_at: Date;

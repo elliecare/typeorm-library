@@ -14,6 +14,8 @@ const types_1 = require("../types");
 const typeorm_1 = require("typeorm");
 const whatsapp_module_entity_1 = require("./modules/whatsapp.module.entity");
 const connect_module_entity_1 = require("./modules/connect.module.entity");
+const mailing_module_entity_1 = require("./modules/mailing.module.entity");
+const commercial_module_entity_1 = require("./modules/commercial.module.entity");
 let CompanyClient = class CompanyClient {
 };
 exports.CompanyClient = CompanyClient;
@@ -53,6 +55,16 @@ __decorate([
     (0, typeorm_1.JoinColumn)(),
     __metadata("design:type", whatsapp_module_entity_1.WhatsappModule)
 ], CompanyClient.prototype, "whatsappModule", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => mailing_module_entity_1.MailingModule, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)(),
+    __metadata("design:type", mailing_module_entity_1.MailingModule)
+], CompanyClient.prototype, "mailingModule", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => commercial_module_entity_1.CommercialModule, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)(),
+    __metadata("design:type", commercial_module_entity_1.CommercialModule)
+], CompanyClient.prototype, "commercialModule", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
