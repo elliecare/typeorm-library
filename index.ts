@@ -56,8 +56,10 @@ import { CommercialModule } from './src/entity/modules/commercial.module.entity'
 import { CommercialModule_audit } from './src/entity/modules/commercial.module_audit.entity';
 import { MailingModule } from './src/entity/modules/mailing.module.entity';
 import { MailingModule_audit } from './src/entity/modules/mailing.module_audit.entity';
+import { SmartwatchModule } from './src/entity/modules/smartwatch.module.entity';
+import { SmartwatchModule_audit } from './src/entity/modules/smartwatch.module_audit.entity';
 
-export const Entities = [MailingModule, MailingModule_audit, CommercialModule_audit, CommercialModule, StaticToken, ConnectModule_audit, WhatsappModule_audit, Company_client_audit, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
+export const Entities = [SmartwatchModule, SmartwatchModule_audit, MailingModule, MailingModule_audit, CommercialModule_audit, CommercialModule, StaticToken, ConnectModule_audit, WhatsappModule_audit, Company_client_audit, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
 
 export { Plans };
 export { PatientAgentContact };
@@ -117,3 +119,5 @@ export { CommercialModule };
 export { CommercialModule_audit };
 export { MailingModule };
 export { MailingModule_audit };
+export { SmartwatchModule };
+export { SmartwatchModule_audit };
