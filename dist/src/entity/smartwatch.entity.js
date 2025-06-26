@@ -109,8 +109,8 @@ __decorate([
     __metadata("design:type", config_entity_1.Config)
 ], Smartwatch.prototype, "config", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, { nullable: true }),
-    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
+    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)({ name: "commercial_owner_id" }),
     __metadata("design:type", company_client_entity_1.CompanyClient)
 ], Smartwatch.prototype, "commercial_owner", void 0);
 __decorate([
