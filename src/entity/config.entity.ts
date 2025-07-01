@@ -20,7 +20,7 @@ export class Config {
 	@JoinColumn({ name: "user_id" })
 	user: User;
 
-	@Column({ type: "double precision", default: 3.5 })
+	@Column({ type: "double precision", default: 0.9 })
 	fallthresholdfactor: string;
 
 	@Column({ default: 900000 })
@@ -29,7 +29,7 @@ export class Config {
 	@Column({ default: 0 })
 	heartrate_value_min: number;
 
-	@Column({ default: 1000 })
+	@Column({ default: 200 })
 	heartrate_value_max: number;
 
 	@Column({ default: 900000 })
