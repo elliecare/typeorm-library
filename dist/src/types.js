@@ -21,6 +21,7 @@ var PlanType;
     PlanType["FREE"] = "free";
     PlanType["BASIC"] = "basic";
     PlanType["GOLD"] = "gold";
+    PlanType["GOLD_LOAN"] = "gold_loan";
     PlanType["COMPANY_CLIENT"] = "company_client";
 })(PlanType || (exports.PlanType = PlanType = {}));
 var SupportNetworkStatus;

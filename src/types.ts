@@ -18,6 +18,7 @@ export enum PlanType {
 	FREE = "free",
 	BASIC = "basic",
 	GOLD = "gold",
+	GOLD_LOAN = "gold_loan",
 	COMPANY_CLIENT = "company_client",
 }
 
