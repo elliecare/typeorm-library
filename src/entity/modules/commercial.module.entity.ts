@@ -49,9 +49,13 @@ export class CommercialModule {
 	};
 
 	@Column({
+		type: "jsonb",
 		nullable: true,
 	})
-	web: string;
+	web: {
+		url: string,
+		display: string
+	};
 
 	@Column({
 		type: "jsonb",

@@ -46,9 +46,10 @@ __decorate([
 ], CommercialModule.prototype, "colors", void 0);
 __decorate([
     (0, typeorm_1.Column)({
+        type: "jsonb",
         nullable: true,
     }),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], CommercialModule.prototype, "web", void 0);
 __decorate([
     (0, typeorm_1.Column)({
