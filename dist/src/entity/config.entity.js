@@ -49,12 +49,7 @@ __decorate([
     __metadata("design:type", user_entity_1.User)
 ], Config.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, { nullable: true }),
-    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
-    __metadata("design:type", company_client_entity_1.CompanyClient)
-], Config.prototype, "company_client", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: "double precision", default: 0.9987 }),
+    (0, typeorm_1.Column)({ type: "double precision", default: 0.9 }),
     __metadata("design:type", String)
 ], Config.prototype, "fallthresholdfactor", void 0);
 __decorate([
