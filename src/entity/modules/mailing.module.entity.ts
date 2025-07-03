@@ -30,6 +30,11 @@ export class MailingModule {
 	})
 	email: string;
 
+	@Column({
+		nullable: true,
+	})
+	footer: string;
+
 	@CreateDateColumn()
 	created_at: Date;
 
