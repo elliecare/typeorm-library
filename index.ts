@@ -58,8 +58,10 @@ import { MailingModule } from './src/entity/modules/mailing.module.entity';
 import { MailingModule_audit } from './src/entity/modules/mailing.module_audit.entity';
 import { SmartwatchModule } from './src/entity/modules/smartwatch.module.entity';
 import { SmartwatchModule_audit } from './src/entity/modules/smartwatch.module_audit.entity';
+import { UserCanary } from 'src/entity/user_canary.entity';
+import { Users_canary_audit } from 'src/entity/user_canary_audit.entity';
 
-export const Entities = [SmartwatchModule, SmartwatchModule_audit, MailingModule, MailingModule_audit, CommercialModule_audit, CommercialModule, StaticToken, ConnectModule_audit, WhatsappModule_audit, Company_client_audit, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
+export const Entities = [UserCanary, Users_canary_audit, SmartwatchModule, SmartwatchModule_audit, MailingModule, MailingModule_audit, CommercialModule_audit, CommercialModule, StaticToken, ConnectModule_audit, WhatsappModule_audit, Company_client_audit, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
 
 export { Plans };
 export { PatientAgentContact };
@@ -103,6 +105,8 @@ export { User_audit };
 export { UserOperationalRole };
 export { UserSmartwatch };
 export { Users_smartwatches_audit };
+export { UserCanary };
+export { Users_canary_audit };
 export { CompanyClient };
 export { Steps };
 export { PasswordResetToken };
