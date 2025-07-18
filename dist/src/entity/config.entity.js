@@ -48,7 +48,7 @@ __decorate([
     __metadata("design:type", user_entity_1.User)
 ], Config.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "double precision", default: 0.9 }),
+    (0, typeorm_1.Column)({ type: "double precision", default: 0.9987 }),
     __metadata("design:type", String)
 ], Config.prototype, "fallthresholdfactor", void 0);
 __decorate([
