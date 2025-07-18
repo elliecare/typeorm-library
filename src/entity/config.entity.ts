@@ -20,7 +20,7 @@ export class Config {
 	@JoinColumn({ name: "user_id" })
 	user: User;
 
-	@Column({ type: "double precision", default: 0.9 })
+	@Column({ type: "double precision", default: 0.9987 })
 	fallthresholdfactor: string;
 
 	@Column({ default: 900000 })
