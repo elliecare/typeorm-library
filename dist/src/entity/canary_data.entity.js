@@ -15,7 +15,7 @@ let CanaryData = class CanaryData {
 };
 exports.CanaryData = CanaryData;
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
 ], CanaryData.prototype, "id", void 0);
 __decorate([

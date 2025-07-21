@@ -4,12 +4,12 @@ import {
 	CreateDateColumn,
 	UpdateDateColumn,
 	DeleteDateColumn,
-	PrimaryColumn,
+	PrimaryGeneratedColumn,
 } from "typeorm";
 
 @Entity("canary_data")
 export class CanaryData {
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn("uuid")
 	id: string;
 
 	@Column()
