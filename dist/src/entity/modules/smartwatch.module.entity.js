@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SmartwatchModule = void 0;
 const typeorm_1 = require("typeorm");
 const company_client_entity_1 = require("../company_client.entity");
+const config_entity_1 = require("../config.entity");
 let SmartwatchModule = class SmartwatchModule {
 };
 exports.SmartwatchModule = SmartwatchModule;
@@ -38,6 +39,11 @@ __decorate([
     }),
     __metadata("design:type", Boolean)
 ], SmartwatchModule.prototype, "assets_ownership", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => config_entity_1.Config, { eager: true }),
+    (0, typeorm_1.JoinColumn)({ name: "config_id" }),
+    __metadata("design:type", config_entity_1.Config)
+], SmartwatchModule.prototype, "config", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

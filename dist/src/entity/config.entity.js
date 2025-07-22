@@ -43,7 +43,7 @@ __decorate([
     __metadata("design:type", String)
 ], Config.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => user_entity_1.User),
+    (0, typeorm_1.ManyToOne)(() => user_entity_1.User, { nullable: true }),
     (0, typeorm_1.JoinColumn)({ name: "user_id" }),
     __metadata("design:type", user_entity_1.User)
 ], Config.prototype, "user", void 0);
