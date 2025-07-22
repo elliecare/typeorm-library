@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Config = void 0;
 const typeorm_1 = require("typeorm");
 const user_entity_1 = require("./user.entity");
+const company_client_entity_1 = require("./company_client.entity");
 let Config = class Config {
     getUnlockedData(input) {
         const _data = {
@@ -47,6 +48,11 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: "user_id" }),
     __metadata("design:type", user_entity_1.User)
 ], Config.prototype, "user", void 0);
+__decorate([
+    (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, { nullable: true }),
+    (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
+    __metadata("design:type", company_client_entity_1.CompanyClient)
+], Config.prototype, "company_client", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: "double precision", default: 0.9987 }),
     __metadata("design:type", String)

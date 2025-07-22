@@ -21,6 +21,10 @@ export class Config {
 	@JoinColumn({ name: "user_id" })
 	user: User;
 
+	@ManyToOne(() => CompanyClient, { nullable: true })
+	@JoinColumn({ name: "company_client_id" })
+	company_client: CompanyClient;
+
 	@Column({ type: "double precision", default: 0.9987 })
 	fallthresholdfactor: string;
 
