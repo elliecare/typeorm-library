@@ -10,13 +10,14 @@ import {
 	DeleteDateColumn,
 } from "typeorm";
 import { User } from "./user.entity";
+import { CompanyClient } from "./company_client.entity";
 @Entity()
 @Unique(["user"])
 export class Config {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
 
-	@ManyToOne(() => User)
+	@ManyToOne(() => User, { nullable: true })
 	@JoinColumn({ name: "user_id" })
 	user: User;
 

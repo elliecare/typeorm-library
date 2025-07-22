@@ -7,8 +7,10 @@ import {
 	ManyToOne,
 	JoinColumn,
 	CreateDateColumn,
+	OneToOne,
 } from "typeorm";
 import { CompanyClient } from "../company_client.entity";
+import { Config } from "../config.entity";
 
 @Entity()
 export class SmartwatchModule {
@@ -30,6 +32,10 @@ export class SmartwatchModule {
 		default: false,
 	})
 	assets_ownership: boolean;
+
+	@OneToOne(() => Config, { eager: true })
+	@JoinColumn({ name: "config_id" })
+	config: Config;
 
 	@CreateDateColumn()
 	created_at: Date;
