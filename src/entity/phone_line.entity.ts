@@ -4,9 +4,12 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
+import { CompanyClient } from "./company_client.entity";
 
 @Entity()
 export class PhoneLine {
@@ -24,6 +27,10 @@ export class PhoneLine {
 
   @Column({default: false})
   is_active: boolean;
+
+  @ManyToOne(() => CompanyClient, { eager: true })
+  @JoinColumn({ name: "company_client_id" })
+  company_client: CompanyClient;
 
   @CreateDateColumn()
   created_at: Date;
