@@ -1,4 +1,4 @@
-import { PhoneNumber } from "../types";
+import { LineProviders } from "../types";
 import {
   Column,
   CreateDateColumn,
@@ -16,11 +16,17 @@ export class PhoneLine {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column({
-    type: "jsonb",
-    nullable: true,
-  })
-  phone_number: PhoneNumber;
+  @Column()
+  number: string;
+
+	@Column()
+  country_code: string;
+
+	@Column()
+  provider: LineProviders | string;
+
+	@Column()
+  country_name: string;
 
   @Column()
   link_to_qr: string;
