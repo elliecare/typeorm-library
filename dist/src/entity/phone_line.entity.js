@@ -20,12 +20,21 @@ __decorate([
     __metadata("design:type", String)
 ], PhoneLine.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
-], PhoneLine.prototype, "phone_number", void 0);
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], PhoneLine.prototype, "number", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], PhoneLine.prototype, "country_code", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], PhoneLine.prototype, "provider", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], PhoneLine.prototype, "country_name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
