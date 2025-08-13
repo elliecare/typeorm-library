@@ -139,7 +139,8 @@ export enum EventType {
 	STEPS = "steps",
 	LOW_BATTERY = "low_battery",
 	WIFI_CONNECTED = "wifi_connected",
-	BATTERY_CHARGING="battery_charging",
+	BATTERY_CHARGING = "battery_charging",
+	LOCATION = "location",
 	HR_ABOVE_BASELINE = "hr_above_baseline",
 	HR_BELOW_BASELINE = "hr_below_baseline",
 }
