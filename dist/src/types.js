@@ -103,6 +103,7 @@ var EventType;
 (function (EventType) {
     EventType["FALL"] = "fall";
     EventType["PROBABLE_FALL"] = "probable_fall";
+    EventType["LONG_BUTTON_PRESS"] = "long_button_press";
     EventType["NOTIFICATION_BUTTON_PRESS"] = "notification_button_press";
     EventType["BUTTON_PRESS"] = "button_press";
     EventType["REMOTE_BUTTON_PRESS"] = "remote_button_press";

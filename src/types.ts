@@ -136,6 +136,7 @@ export interface Alert {
 export enum EventType {
 	FALL = "fall",
 	PROBABLE_FALL = "probable_fall",
+	LONG_BUTTON_PRESS = "long_button_press",
 	NOTIFICATION_BUTTON_PRESS = "notification_button_press",
 	BUTTON_PRESS = "button_press",
 	REMOTE_BUTTON_PRESS = "remote_button_press",
