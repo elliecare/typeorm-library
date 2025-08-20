@@ -40,6 +40,20 @@ __decorate([
     __metadata("design:type", Boolean)
 ], SmartwatchModule.prototype, "assets_ownership", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        type: Boolean,
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], SmartwatchModule.prototype, "send_message_long_time_off_body", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "bigint",
+        default: 3,
+    }),
+    __metadata("design:type", Number)
+], SmartwatchModule.prototype, "long_time_off_body", void 0);
+__decorate([
     (0, typeorm_1.OneToOne)(() => config_entity_1.Config, { eager: true }),
     (0, typeorm_1.JoinColumn)({ name: "config_id" }),
     __metadata("design:type", config_entity_1.Config)
