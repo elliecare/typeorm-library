@@ -64,6 +64,9 @@ export class Sensors {
 	@Column({nullable:true})
 	off_body_updated_at: Date;
 
+	@Column({default:false})
+	sent_off_body_message: boolean;
+
 	@Column({nullable:true})
 	steps: number;
 
