@@ -47,6 +47,8 @@ import {PhoneLine} from './src/entity/phone_line.entity';
 import {WifiConnected} from './src/entity/wifi_connected.entity';
 import {Sensors_audit} from './src/entity/sensors_audit.entity';
 import { ConnectModule } from './src/entity/modules/connect.module.entity';
+import { IntegrationModule } from './src/entity/modules/integration.module.entity';
+import { IntegrationModule_audit } from './src/entity/modules/integration.module_audit.entity';
 import { WhatsappModule } from './src/entity/modules/whatsapp.module.entity';
 import { Company_client_audit } from './src/entity/company_client_audit.entity';
 import { StaticToken } from './src/entity/static_token.entity';
@@ -65,7 +67,7 @@ import { CanaryModule } from './src/entity/modules/canary.module.entity';
 import { CanaryModule_audit } from './src/entity/modules/canary.module_audit.entity';
 import { CanaryData } from './src/entity/canary_data.entity';
 
-export const Entities = [ CanaryData, CanaryModule, CanaryModule_audit, Assessment, UserCanary, Users_canary_audit, SmartwatchModule, SmartwatchModule_audit, MailingModule, MailingModule_audit, CommercialModule_audit, CommercialModule, StaticToken, ConnectModule_audit, WhatsappModule_audit, Company_client_audit, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
+export const Entities = [ IntegrationModule, IntegrationModule_audit, CanaryData, CanaryModule, CanaryModule_audit, Assessment, UserCanary, Users_canary_audit, SmartwatchModule, SmartwatchModule_audit, MailingModule, MailingModule_audit, CommercialModule_audit, CommercialModule, StaticToken, ConnectModule_audit, WhatsappModule_audit, Company_client_audit, WhatsappModule, ConnectModule, Sensors_audit, WifiConnected, PhoneLine, PasswordResetToken, Steps,Alert_audit,CompanyClient,InviteCode,Config_audit,Health_system_audit,Config,Gateway_audit,EventEntity,DiscountCode, Gateway,HealthSystem,HeartRate,LineProvider,Battery,Location,Measurement,Message,Notification,OffBody,OperationalRole,PlansDescription,Purchase,Role_SupportNetwork,User_audit,User,Smartwatch_audit,Smartwatch,Role_support_network_audit, Sensors,Tracking,Support_network_audit,SupportNetwork, Tracking_audit, Users_smartwatches_audit, UserSmartwatch, Plans, PatientAgentContact, UserOperationalRole, Plans_audit, AccessCode, Alert, AlertConfiguration, AlertLogs]
 
 export { Plans };
 export { PatientAgentContact };
@@ -121,6 +123,8 @@ export { StaticToken };
 export { Company_client_audit };
 export { ConnectModule };
 export { ConnectModule_audit };
+export { IntegrationModule };
+export { IntegrationModule_audit };
 export { WhatsappModule };
 export { WhatsappModule_audit };
 export { CommercialModule };

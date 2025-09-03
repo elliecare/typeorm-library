@@ -18,6 +18,7 @@ const mailing_module_entity_1 = require("./modules/mailing.module.entity");
 const commercial_module_entity_1 = require("./modules/commercial.module.entity");
 const smartwatch_module_entity_1 = require("./modules/smartwatch.module.entity");
 const canary_module_entity_1 = require("./modules/canary.module.entity");
+const integration_module_entity_1 = require("./modules/integration.module.entity");
 let CompanyClient = class CompanyClient {
 };
 exports.CompanyClient = CompanyClient;
@@ -52,6 +53,11 @@ __decorate([
     (0, typeorm_1.JoinColumn)(),
     __metadata("design:type", connect_module_entity_1.ConnectModule)
 ], CompanyClient.prototype, "connectModule", void 0);
+__decorate([
+    (0, typeorm_1.OneToOne)(() => integration_module_entity_1.IntegrationModule, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)(),
+    __metadata("design:type", integration_module_entity_1.IntegrationModule)
+], CompanyClient.prototype, "integrationModule", void 0);
 __decorate([
     (0, typeorm_1.OneToOne)(() => whatsapp_module_entity_1.WhatsappModule, { eager: true, nullable: true }),
     (0, typeorm_1.JoinColumn)(),

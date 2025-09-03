@@ -15,6 +15,7 @@ import { MailingModule } from "./modules/mailing.module.entity";
 import { CommercialModule } from "./modules/commercial.module.entity";
 import { SmartwatchModule } from "./modules/smartwatch.module.entity";
 import { CanaryModule } from "./modules/canary.module.entity";
+import { IntegrationModule } from "./modules/integration.module.entity";
 
 @Entity()
 export class CompanyClient {
@@ -42,6 +43,10 @@ export class CompanyClient {
 	@OneToOne(() => ConnectModule, { eager: true, nullable: true })
 	@JoinColumn()
 	connectModule?: ConnectModule;
+
+	@OneToOne(() => IntegrationModule, { eager: true, nullable: true })
+	@JoinColumn()
+	integrationModule?: IntegrationModule;
 
 	@OneToOne(() => WhatsappModule, { eager: true, nullable: true })
 	@JoinColumn()
