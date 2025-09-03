@@ -27,12 +27,6 @@ export class ConnectModule {
 	enabled: boolean;
 
 	@Column({
-		type: Boolean,
-		default: true
-	})
-	aws_connect: boolean;
-
-	@Column({
 		nullable: true,
 	})
 	send_url: string;

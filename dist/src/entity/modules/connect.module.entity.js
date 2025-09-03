@@ -33,13 +33,6 @@ __decorate([
 ], ConnectModule.prototype, "enabled", void 0);
 __decorate([
     (0, typeorm_1.Column)({
-        type: Boolean,
-        default: true
-    }),
-    __metadata("design:type", Boolean)
-], ConnectModule.prototype, "aws_connect", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
         nullable: true,
     }),
     __metadata("design:type", String)
