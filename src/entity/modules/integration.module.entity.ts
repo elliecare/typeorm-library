@@ -69,6 +69,12 @@ export class IntegrationModule {
 		type: "jsonb",
 		nullable: true,
 	})
+	phone_number: PhoneNumber;
+
+	@Column({
+		type: "jsonb",
+		nullable: true,
+	})
 	support_contacts: { emails: string[]; whatsapp: PhoneNumber[] };
 
 	@Column({

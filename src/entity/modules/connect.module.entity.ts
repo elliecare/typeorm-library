@@ -76,7 +76,7 @@ export class ConnectModule {
 		nullable: true,
 	})
 	phone_number: PhoneNumber;
-	//@TODO revisar si esto funciona como corresponde
+	
 	@Column({
 		type: "jsonb",
 		nullable: true,

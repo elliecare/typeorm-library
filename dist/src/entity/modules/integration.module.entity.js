@@ -83,6 +83,13 @@ __decorate([
         nullable: true,
     }),
     __metadata("design:type", Object)
+], IntegrationModule.prototype, "phone_number", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "jsonb",
+        nullable: true,
+    }),
+    __metadata("design:type", Object)
 ], IntegrationModule.prototype, "support_contacts", void 0);
 __decorate([
     (0, typeorm_1.Column)({
