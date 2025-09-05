@@ -14,6 +14,16 @@ const typeorm_1 = require("typeorm");
 const user_entity_1 = require("./user.entity");
 const company_client_entity_1 = require("./company_client.entity");
 let Config = class Config {
+    getLockedData(input) {
+        const _data = {
+            timeout_cancel_display: input.timeout_cancel_display
+        };
+        for (const key in _data) {
+            if (_data[key] === undefined || _data[key] === null)
+                delete _data[key];
+        }
+        return _data;
+    }
     getUnlockedData(input) {
         const _data = {
             fallthresholdfactor: input.fallthresholdfactor,
@@ -109,6 +119,13 @@ __decorate([
     (0, typeorm_1.Column)({ default: 900000 }),
     __metadata("design:type", Number)
 ], Config.prototype, "location_service_update_interval", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "bigint",
+        default: 10000
+    }),
+    __metadata("design:type", Number)
+], Config.prototype, "timeout_cancel_display", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

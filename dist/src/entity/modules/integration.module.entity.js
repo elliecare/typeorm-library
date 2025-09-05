@@ -61,22 +61,7 @@ __decorate([
         nullable: true,
     }),
     __metadata("design:type", Number)
-], IntegrationModule.prototype, "timeout", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "bigint",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
 ], IntegrationModule.prototype, "timeout_redial", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "bigint",
-        nullable: true,
-        default: 12000
-    }),
-    __metadata("design:type", Number)
-], IntegrationModule.prototype, "timeout_holding", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "jsonb",

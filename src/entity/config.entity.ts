@@ -67,6 +67,12 @@ export class Config {
 	@Column({ default: 900000 })
 	location_service_update_interval: number;
 
+	@Column({
+		type: "bigint",
+		default:10000
+	})
+	timeout_cancel_display: number;
+
 	@CreateDateColumn()
 	created_at: Date;
 
@@ -75,6 +81,18 @@ export class Config {
 
 	@DeleteDateColumn()
 	deleted_at: Date;
+
+	getLockedData(input: Partial<Config>): Partial<Config> {
+		const _data = {
+			timeout_cancel_display: input.timeout_cancel_display
+		};
+
+		for (const key in _data) {
+			if (_data[key] === undefined || _data[key] === null) delete _data[key];
+		}
+
+		return _data;
+	}
 
 	getUnlockedData(input: Partial<Config>): Partial<Config> {
 		const _data = {

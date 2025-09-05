@@ -50,20 +50,7 @@ export class IntegrationModule {
 		type: "bigint",
 		nullable: true,
 	})
-	timeout: number;
-
-	@Column({
-		type: "bigint",
-		nullable: true,
-	})
 	timeout_redial: number;
-
-	@Column({
-		type: "bigint",
-		nullable: true,
-		default:12000
-	})
-	timeout_holding: number;
 
 	@Column({
 		type: "jsonb",
