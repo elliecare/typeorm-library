@@ -16,6 +16,7 @@ import { CommercialModule } from "./modules/commercial.module.entity";
 import { SmartwatchModule } from "./modules/smartwatch.module.entity";
 import { CanaryModule } from "./modules/canary.module.entity";
 import { IntegrationModule } from "./modules/integration.module.entity";
+import { Config } from "./config.entity";
 
 @Entity()
 export class CompanyClient {
@@ -67,6 +68,10 @@ export class CompanyClient {
 	@OneToOne(() => CanaryModule, { eager: true, nullable: true })
 	@JoinColumn()
 	canaryModule?: CanaryModule;
+
+	@OneToOne(() => Config, { eager: true })
+	@JoinColumn({ name: "config_id" })
+	config: Config;
 
 	@CreateDateColumn()
 	created_at: Date;
