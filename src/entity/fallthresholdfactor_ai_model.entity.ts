@@ -19,19 +19,19 @@ export class FallThresholdFactorAIModelEntity {
 	sw_app_version: string;
 
 	@Column({ type: "double precision", default: 0.985 })
-	1: string;
+	level_1: string;
 
 	@Column({ type: "double precision", default: 0.9962 })
-	2: string;
+	level_2: string;
 
 	@Column({ type: "double precision", default: 0.9987 })
-	3: string;
+	level_3: string;
 
 	@Column({ type: "double precision", default: 0.9998 })
-	4: string;
+	level_4: string;
 
 	@Column({ type: "double precision", default: 0.9999 })
-	5: string;
+	level_5: string;
 
 	@CreateDateColumn()
 	created_at: Date;

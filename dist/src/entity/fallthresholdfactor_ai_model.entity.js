@@ -29,23 +29,23 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({ type: "double precision", default: 0.985 }),
     __metadata("design:type", String)
-], FallThresholdFactorAIModelEntity.prototype, 1, void 0);
+], FallThresholdFactorAIModelEntity.prototype, "level_1", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: "double precision", default: 0.9962 }),
     __metadata("design:type", String)
-], FallThresholdFactorAIModelEntity.prototype, 2, void 0);
+], FallThresholdFactorAIModelEntity.prototype, "level_2", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: "double precision", default: 0.9987 }),
     __metadata("design:type", String)
-], FallThresholdFactorAIModelEntity.prototype, 3, void 0);
+], FallThresholdFactorAIModelEntity.prototype, "level_3", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: "double precision", default: 0.9998 }),
     __metadata("design:type", String)
-], FallThresholdFactorAIModelEntity.prototype, 4, void 0);
+], FallThresholdFactorAIModelEntity.prototype, "level_4", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: "double precision", default: 0.9999 }),
     __metadata("design:type", String)
-], FallThresholdFactorAIModelEntity.prototype, 5, void 0);
+], FallThresholdFactorAIModelEntity.prototype, "level_5", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
