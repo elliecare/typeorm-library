@@ -15,7 +15,7 @@ export class FallThresholdFactorAIModelEntity {
 	@Column()
 	model_version: string;
 
-	@Column()
+	@Column({ unique: true })
 	sw_app_version: string;
 
 	@Column({ type: "double precision", default: 0.985 })

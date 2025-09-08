@@ -23,7 +23,7 @@ __decorate([
     __metadata("design:type", String)
 ], FallThresholdFactorAIModelEntity.prototype, "model_version", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ unique: true }),
     __metadata("design:type", String)
 ], FallThresholdFactorAIModelEntity.prototype, "sw_app_version", void 0);
 __decorate([
