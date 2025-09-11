@@ -93,6 +93,9 @@ export class SupportNetwork {
 	@JoinColumn({ name: "company_client_id" })
 	company_client: CompanyClient;
 
+	@Column({nullable: true})
+	observations: string;
+
 	@CreateDateColumn()
 	created_at: Date;
 

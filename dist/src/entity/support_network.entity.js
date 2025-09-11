@@ -112,6 +112,10 @@ __decorate([
     __metadata("design:type", company_client_entity_1.CompanyClient)
 ], SupportNetwork.prototype, "company_client", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], SupportNetwork.prototype, "observations", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], SupportNetwork.prototype, "created_at", void 0);

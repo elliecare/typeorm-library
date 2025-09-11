@@ -16,7 +16,8 @@ const company_client_entity_1 = require("./company_client.entity");
 let Config = class Config {
     getLockedData(input) {
         const _data = {
-            timeout_cancel_display: input.timeout_cancel_display
+            timeout_cancel_display: input.timeout_cancel_display,
+            observations: input.observations
         };
         for (const key in _data) {
             if (_data[key] === undefined || _data[key] === null)
@@ -126,6 +127,10 @@ __decorate([
     }),
     __metadata("design:type", Number)
 ], Config.prototype, "timeout_cancel_display", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], Config.prototype, "observations", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
