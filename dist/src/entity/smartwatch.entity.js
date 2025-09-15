@@ -16,6 +16,7 @@ const company_client_entity_1 = require("./company_client.entity");
 const support_network_entity_1 = require("./support_network.entity");
 const tracking_entity_1 = require("./tracking.entity");
 const config_entity_1 = require("./config.entity");
+const phone_line_entity_1 = require("./phone_line.entity");
 let Smartwatch = class Smartwatch {
 };
 exports.Smartwatch = Smartwatch;
@@ -76,18 +77,14 @@ __decorate([
     __metadata("design:type", Boolean)
 ], Smartwatch.prototype, "knox", void 0);
 __decorate([
-    (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
+    (0, typeorm_1.OneToOne)(() => phone_line_entity_1.PhoneLine, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)({ name: "phone_number_1" }),
+    __metadata("design:type", phone_line_entity_1.PhoneLine)
 ], Smartwatch.prototype, "phone_number_1", void 0);
 __decorate([
-    (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
+    (0, typeorm_1.OneToOne)(() => phone_line_entity_1.PhoneLine, { eager: true, nullable: true }),
+    (0, typeorm_1.JoinColumn)({ name: "phone_number_2" }),
+    __metadata("design:type", phone_line_entity_1.PhoneLine)
 ], Smartwatch.prototype, "phone_number_2", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, { eager: true }),
