@@ -25,7 +25,7 @@ export class Config {
 	@JoinColumn({ name: "company_client_id" })
 	company_client: CompanyClient;
 
-	@Column({ type: "double precision", default: 0.9987 })
+	@Column({ type: "double precision", default: 0.9 })
 	fallthresholdfactor: string;
 
 	@Column({ default: 900000 })
