@@ -97,9 +97,8 @@ export class Smartwatch {
 	@JoinColumn({ name: "config_id" })
 	config: Config;
 
-	@ManyToOne(() => CompanyClient, { eager: true, nullable: true })
-	@JoinColumn({ name: "commercial_owner_id" })
-	commercial_owner: CompanyClient;
+	@Column({ default: null })
+	commercial_owner: string;
 	
 	@Column({ default: false })
 	out_of_date: boolean;

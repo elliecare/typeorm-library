@@ -28,7 +28,7 @@ export class ConnectModule {
 
 	@Column({
 		type: Boolean,
-		nullable: true,
+		default: true
 	})
 	aws_connect: boolean;
 

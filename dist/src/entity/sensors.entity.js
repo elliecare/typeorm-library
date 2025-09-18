@@ -83,6 +83,10 @@ __decorate([
     __metadata("design:type", Date)
 ], Sensors.prototype, "off_body_updated_at", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ default: false }),
+    __metadata("design:type", Boolean)
+], Sensors.prototype, "sent_off_body_message", void 0);
+__decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", Number)
 ], Sensors.prototype, "steps", void 0);

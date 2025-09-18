@@ -10,17 +10,22 @@ import {
 	DeleteDateColumn,
 } from "typeorm";
 import { User } from "./user.entity";
+import { CompanyClient } from "./company_client.entity";
 @Entity()
 @Unique(["user"])
 export class Config {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
 
-	@ManyToOne(() => User)
+	@ManyToOne(() => User, { nullable: true })
 	@JoinColumn({ name: "user_id" })
 	user: User;
 
-	@Column({ type: "double precision", default: 0.9987 })
+	@ManyToOne(() => CompanyClient, { nullable: true })
+	@JoinColumn({ name: "company_client_id" })
+	company_client: CompanyClient;
+
+	@Column({ type: "double precision", default: 0.9 })
 	fallthresholdfactor: string;
 
 	@Column({ default: 900000 })

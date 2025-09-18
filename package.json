@@ -1,6 +1,6 @@
 {
   "name": "typeorm-library",
-  "version": "2.22.1",
+  "version": "2.50.4",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

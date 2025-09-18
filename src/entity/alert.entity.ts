@@ -109,6 +109,12 @@ export class Alert {
 	@Column({ name: "company_client_id", nullable:true })
 	company_client_id: string;
 
+	@Column({ nullable:true })
+	connect_case_id: string;
+
+	@Column({ nullable:true })
+	true_event: boolean;
+
 	@CreateDateColumn()
 	created_at: Date;
 
