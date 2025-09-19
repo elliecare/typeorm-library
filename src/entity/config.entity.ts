@@ -73,9 +73,6 @@ export class Config {
 	})
 	timeout_cancel_display: number;
 
-	@Column({nullable: true})
-	observations: string;
-
 	@CreateDateColumn()
 	created_at: Date;
 
@@ -87,8 +84,7 @@ export class Config {
 
 	getLockedData(input: Partial<Config>): Partial<Config> {
 		const _data = {
-			timeout_cancel_display: input.timeout_cancel_display,
-			observations: input.observations
+			timeout_cancel_display: input.timeout_cancel_display
 		};
 
 		for (const key in _data) {

@@ -170,6 +170,9 @@ export class User {
 	@Column({nullable:true})
 	language:Language;
 
+	@Column({nullable: true})
+	observations: string;
+
 	@CreateDateColumn()
 	created_at: Date;
 
