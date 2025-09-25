@@ -61,6 +61,10 @@ __decorate([
     __metadata("design:type", String)
 ], Alert.prototype, "user_id", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ nullable: true }),
+    __metadata("design:type", String)
+], Alert.prototype, "case_id", void 0);
+__decorate([
     (0, typeorm_1.OneToOne)(() => event_entity_1.EventEntity),
     (0, typeorm_1.JoinColumn)({ name: "event_id" }),
     __metadata("design:type", event_entity_1.EventEntity)

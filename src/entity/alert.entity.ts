@@ -28,6 +28,9 @@ export class Alert {
 	@Column({ name: "user_id", nullable:true })
 	user_id: string;
 
+	@Column({ nullable:true })
+	case_id: string;
+
 	@OneToOne(() => EventEntity)
 	@JoinColumn({ name: "event_id" })
 	event: EventEntity;
