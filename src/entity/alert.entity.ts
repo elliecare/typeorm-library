@@ -110,7 +110,7 @@ export class Alert {
 	company_client_id: string;
 
 	@Column({ nullable:true })
-	connect_case_id: string;
+	case_id: string;
 
 	@Column({ nullable:true })
 	true_event: boolean;
