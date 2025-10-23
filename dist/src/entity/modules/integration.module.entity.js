@@ -57,13 +57,6 @@ __decorate([
 ], IntegrationModule.prototype, "client_secret", void 0);
 __decorate([
     (0, typeorm_1.Column)({
-        type: "bigint",
-        nullable: true,
-    }),
-    __metadata("design:type", Number)
-], IntegrationModule.prototype, "timeout_redial", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
         type: "jsonb",
         nullable: true,
     }),
