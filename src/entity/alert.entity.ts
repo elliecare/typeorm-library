@@ -115,6 +115,11 @@ export class Alert {
 	@Column({ nullable:true })
 	true_event: boolean;
 
+	@Column({
+		nullable: true,
+	})
+	connect_status: string;
+
 	@CreateDateColumn()
 	created_at: Date;
 

@@ -47,12 +47,6 @@ export class IntegrationModule {
 	client_secret: string;
 
 	@Column({
-		type: "bigint",
-		nullable: true,
-	})
-	timeout_redial: number;
-
-	@Column({
 		type: "jsonb",
 		nullable: true,
 	})
