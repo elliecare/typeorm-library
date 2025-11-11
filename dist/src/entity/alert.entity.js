@@ -173,6 +173,12 @@ __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
 ], Alert.prototype, "updated_at", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", String)
+], Alert.prototype, "app_version", void 0);
 exports.Alert = Alert = __decorate([
     (0, typeorm_1.Entity)()
 ], Alert);
