@@ -56,6 +56,11 @@ export class EventEntity {
 	@Column({ name: "smartwatch_id", nullable:true })
 	smartwatch_id: string;
 
+	@Column({
+		nullable: true,
+	})
+	app_version: string;
+
 	@CreateDateColumn()
 	created_at: Date;
 }

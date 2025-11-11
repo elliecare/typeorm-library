@@ -72,6 +72,12 @@ __decorate([
     __metadata("design:type", String)
 ], EventEntity.prototype, "smartwatch_id", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", String)
+], EventEntity.prototype, "app_version", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], EventEntity.prototype, "created_at", void 0);
