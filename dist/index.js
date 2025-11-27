@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.WifiConnected = exports.PhoneLine = exports.PasswordResetToken = exports.Steps = exports.CompanyClient = exports.Users_canary_audit = exports.UserCanary = exports.Users_smartwatches_audit = exports.UserSmartwatch = exports.UserOperationalRole = exports.User_audit = exports.User = exports.Tracking_audit = exports.Tracking = exports.Support_network_audit = exports.SupportNetwork = exports.Smartwatch_audit = exports.Smartwatch = exports.Sensors = exports.Role_support_network_audit = exports.Role_SupportNetwork = exports.Purchase = exports.PlansDescription = exports.OperationalRole = exports.OffBody = exports.Notification = exports.Message = exports.Measurement = exports.Location = exports.LineProvider = exports.InviteCode = exports.HeartRate = exports.Health_system_audit = exports.HealthSystem = exports.Gateway_audit = exports.Gateway = exports.EventEntity = exports.DiscountCode = exports.Config_audit = exports.Config = exports.Battery = exports.AlertLogs = exports.AlertConfiguration = exports.Alert_audit = exports.Alert = exports.AccessCode = exports.Plans_audit = exports.PatientAgentContact = exports.Plans = exports.Entities = void 0;
-exports.FallThresholdFactorAIModelEntity = exports.CanaryData = exports.CanaryModule_audit = exports.CanaryModule = exports.Assessment = exports.SmartwatchModule = exports.MailingModule_audit = exports.MailingModule = exports.CommercialModule_audit = exports.CommercialModule = exports.WhatsappModule_audit = exports.WhatsappModule = exports.IntegrationModule_audit = exports.IntegrationModule = exports.ConnectModule_audit = exports.ConnectModule = exports.Company_client_audit = exports.StaticToken = exports.Sensors_audit = void 0;
+exports.EventSubscription = exports.FallThresholdFactorAIModelEntity = exports.CanaryData = exports.CanaryModule_audit = exports.CanaryModule = exports.Assessment = exports.SmartwatchModule = exports.MailingModule_audit = exports.MailingModule = exports.CommercialModule_audit = exports.CommercialModule = exports.WhatsappModule_audit = exports.WhatsappModule = exports.IntegrationModule_audit = exports.IntegrationModule = exports.ConnectModule_audit = exports.ConnectModule = exports.Company_client_audit = exports.StaticToken = exports.Sensors_audit = void 0;
 const plans_entity_1 = require("./src/entity/plans.entity");
 Object.defineProperty(exports, "Plans", { enumerable: true, get: function () { return plans_entity_1.Plans; } });
 const steps_entity_1 = require("./src/entity/steps.entity");
@@ -139,7 +139,10 @@ const canary_data_entity_1 = require("./src/entity/canary_data.entity");
 Object.defineProperty(exports, "CanaryData", { enumerable: true, get: function () { return canary_data_entity_1.CanaryData; } });
 const fallthresholdfactor_ai_model_entity_1 = require("./src/entity/fallthresholdfactor_ai_model.entity");
 Object.defineProperty(exports, "FallThresholdFactorAIModelEntity", { enumerable: true, get: function () { return fallthresholdfactor_ai_model_entity_1.FallThresholdFactorAIModelEntity; } });
+const event_subscription_entity_1 = require("src/entity/event-subscription.entity");
+Object.defineProperty(exports, "EventSubscription", { enumerable: true, get: function () { return event_subscription_entity_1.EventSubscription; } });
 exports.Entities = [
+    event_subscription_entity_1.EventSubscription,
     fallthresholdfactor_ai_model_entity_1.FallThresholdFactorAIModelEntity,
     integration_module_entity_1.IntegrationModule,
     integration_module_audit_entity_1.IntegrationModule_audit,
