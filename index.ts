@@ -67,8 +67,10 @@ import { CanaryModule } from "./src/entity/modules/canary.module.entity";
 import { CanaryModule_audit } from "./src/entity/modules/canary.module_audit.entity";
 import { CanaryData } from "./src/entity/canary_data.entity";
 import { FallThresholdFactorAIModelEntity } from "./src/entity/fallthresholdfactor_ai_model.entity";
+import { EventSubscription } from "src/entity/event-subscription.entity";
 
 export const Entities = [
+  EventSubscription,
   FallThresholdFactorAIModelEntity,
   IntegrationModule,
   IntegrationModule_audit,
@@ -208,3 +210,4 @@ export { CanaryModule };
 export { CanaryModule_audit };
 export { CanaryData };
 export { FallThresholdFactorAIModelEntity };
+export { EventSubscription };
