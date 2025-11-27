@@ -17,6 +17,7 @@ import { SmartwatchModule } from "./modules/smartwatch.module.entity";
 import { CanaryModule } from "./modules/canary.module.entity";
 import { IntegrationModule } from "./modules/integration.module.entity";
 import { Config } from "./config.entity";
+import { EventModule } from "./modules/event.module.entity";
 
 @Entity()
 export class CompanyClient {
@@ -68,6 +69,10 @@ export class CompanyClient {
 	@OneToOne(() => CanaryModule, { eager: true, nullable: true })
 	@JoinColumn()
 	canaryModule?: CanaryModule;
+
+	@OneToOne(() => EventModule, { eager: true, nullable: true })
+	@JoinColumn()
+	eventModule?: EventModule;
 
 	@OneToOne(() => Config, { eager: true })
 	@JoinColumn({ name: "config_id" })
