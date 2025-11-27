@@ -139,7 +139,7 @@ const canary_data_entity_1 = require("./src/entity/canary_data.entity");
 Object.defineProperty(exports, "CanaryData", { enumerable: true, get: function () { return canary_data_entity_1.CanaryData; } });
 const fallthresholdfactor_ai_model_entity_1 = require("./src/entity/fallthresholdfactor_ai_model.entity");
 Object.defineProperty(exports, "FallThresholdFactorAIModelEntity", { enumerable: true, get: function () { return fallthresholdfactor_ai_model_entity_1.FallThresholdFactorAIModelEntity; } });
-const event_subscription_entity_1 = require("src/entity/event-subscription.entity");
+const event_subscription_entity_1 = require("./src/entity/event-subscription.entity");
 Object.defineProperty(exports, "EventSubscription", { enumerable: true, get: function () { return event_subscription_entity_1.EventSubscription; } });
 exports.Entities = [
     event_subscription_entity_1.EventSubscription,
