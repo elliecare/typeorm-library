@@ -20,10 +20,10 @@ export class EventSubscription {
 		onDelete: "CASCADE",
 	})
 	@JoinColumn({ name: "company_client_id" })
-	companyClient!: CompanyClient;
+	company_client!: CompanyClient;
 
 	@Column({ name: "company_client_id" })
-	companyClientId!: string;
+	company_client_id!: string;
 
 	// Evento del enum al que se suscribe este endpoint
 	@Column({
@@ -35,11 +35,18 @@ export class EventSubscription {
 
 	// URL a la que le vas a pegar cuando ocurra el evento
 	@Column({ name: "endpoint_url" })
-	endpointUrl!: string;
+	endpoint_url!: string;
+
+	@Column({ name: "auth_url" })
+	auth_url!: string;
 
 	// Secret opcional para firmar el webhook
+
+	@Column({ name: "endpoint_id", nullable: true })
+	client_id!: string | null;
+
 	@Column({ name: "endpoint_secret", nullable: true })
-	endpointSecret!: string | null;
+	client_secret!: string | null;
 
 	// Para activar/desactivar sin borrar
 	@Column({ name: "is_active", default: true })

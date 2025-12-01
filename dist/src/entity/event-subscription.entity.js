@@ -27,11 +27,11 @@ __decorate([
     }),
     (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
     __metadata("design:type", company_client_entity_1.CompanyClient)
-], EventSubscription.prototype, "companyClient", void 0);
+], EventSubscription.prototype, "company_client", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: "company_client_id" }),
     __metadata("design:type", String)
-], EventSubscription.prototype, "companyClientId", void 0);
+], EventSubscription.prototype, "company_client_id", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         name: "event_type",
@@ -43,11 +43,19 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({ name: "endpoint_url" }),
     __metadata("design:type", String)
-], EventSubscription.prototype, "endpointUrl", void 0);
+], EventSubscription.prototype, "endpoint_url", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: "auth_url" }),
+    __metadata("design:type", String)
+], EventSubscription.prototype, "auth_url", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: "endpoint_id", nullable: true }),
+    __metadata("design:type", String)
+], EventSubscription.prototype, "client_id", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: "endpoint_secret", nullable: true }),
     __metadata("design:type", String)
-], EventSubscription.prototype, "endpointSecret", void 0);
+], EventSubscription.prototype, "client_secret", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: "is_active", default: true }),
     __metadata("design:type", Boolean)
