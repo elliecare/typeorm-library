@@ -31,7 +31,7 @@ export class EventSubscription {
 		type: "enum",
 		enum: EventType,
 	})
-	eventType!: EventType;
+	event_type!: EventType;
 
 	// URL a la que le vas a pegar cuando ocurra el evento
 	@Column({ name: "endpoint_url" })
@@ -50,11 +50,11 @@ export class EventSubscription {
 
 	// Para activar/desactivar sin borrar
 	@Column({ name: "is_active", default: true })
-	isActive!: boolean;
+	is_active!: boolean;
 
 	@CreateDateColumn({ name: "created_at" })
-	createdAt!: Date;
+	created_at!: Date;
 
 	@UpdateDateColumn({ name: "updated_at" })
-	updatedAt!: Date;
+	updated_at!: Date;
 }
