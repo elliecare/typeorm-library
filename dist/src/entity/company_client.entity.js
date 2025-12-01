@@ -91,7 +91,7 @@ __decorate([
     __metadata("design:type", config_entity_1.Config)
 ], CompanyClient.prototype, "config", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)(() => event_subscription_entity_1.EventSubscription, (sub) => sub.companyClient),
+    (0, typeorm_1.OneToMany)(() => event_subscription_entity_1.EventSubscription, (sub) => sub.company_client),
     __metadata("design:type", Array)
 ], CompanyClient.prototype, "eventSubscriptions", void 0);
 __decorate([

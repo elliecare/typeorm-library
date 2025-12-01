@@ -75,7 +75,7 @@ export class CompanyClient {
 	@JoinColumn({ name: "config_id" })
 	config: Config;
 
-	@OneToMany(() => EventSubscription, (sub) => sub.companyClient)
+	@OneToMany(() => EventSubscription, (sub) => sub.company_client)
 	eventSubscriptions!: EventSubscription[];
 
 	@CreateDateColumn()
