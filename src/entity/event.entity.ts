@@ -61,6 +61,9 @@ export class EventEntity {
 	})
 	app_version: string;
 
+	@Column({nullable: true, type: "timestamptz"})
+	sent_by_webhook: Date;
+
 	@CreateDateColumn()
 	created_at: Date;
 }
