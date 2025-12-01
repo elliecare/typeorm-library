@@ -39,7 +39,7 @@ __decorate([
         enum: types_1.EventType,
     }),
     __metadata("design:type", String)
-], EventSubscription.prototype, "eventType", void 0);
+], EventSubscription.prototype, "event_type", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: "endpoint_url" }),
     __metadata("design:type", String)
@@ -59,15 +59,15 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({ name: "is_active", default: true }),
     __metadata("design:type", Boolean)
-], EventSubscription.prototype, "isActive", void 0);
+], EventSubscription.prototype, "is_active", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)({ name: "created_at" }),
     __metadata("design:type", Date)
-], EventSubscription.prototype, "createdAt", void 0);
+], EventSubscription.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)({ name: "updated_at" }),
     __metadata("design:type", Date)
-], EventSubscription.prototype, "updatedAt", void 0);
+], EventSubscription.prototype, "updated_at", void 0);
 exports.EventSubscription = EventSubscription = __decorate([
     (0, typeorm_1.Entity)({ name: "event_subscription" })
 ], EventSubscription);
