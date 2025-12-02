@@ -93,6 +93,12 @@ export enum SmartwatchModels {
 	WEAR5 = "Wear 5",
 	WEAR6 = "Wear 6",
 	WEAR7 = "Wear 7",
+	WEAR8 = "Wear 8",
+	WATCH4 = "Watch 4",
+	WATCH5 = "Watch 5",
+	WATCH6 = "Watch 6",
+	WATCH7 = "Watch 7",
+	WATCH8 = "Watch 8",
 }
 
 export enum SmartwatchSizes {

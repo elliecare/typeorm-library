@@ -71,6 +71,12 @@ var SmartwatchModels;
     SmartwatchModels["WEAR5"] = "Wear 5";
     SmartwatchModels["WEAR6"] = "Wear 6";
     SmartwatchModels["WEAR7"] = "Wear 7";
+    SmartwatchModels["WEAR8"] = "Wear 8";
+    SmartwatchModels["WATCH4"] = "Watch 4";
+    SmartwatchModels["WATCH5"] = "Watch 5";
+    SmartwatchModels["WATCH6"] = "Watch 6";
+    SmartwatchModels["WATCH7"] = "Watch 7";
+    SmartwatchModels["WATCH8"] = "Watch 8";
 })(SmartwatchModels || (exports.SmartwatchModels = SmartwatchModels = {}));
 var SmartwatchSizes;
 (function (SmartwatchSizes) {
