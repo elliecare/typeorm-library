@@ -1,4 +1,4 @@
-import { LineProviders } from "../types";
+import { LineProviders, PhoneLineStatus } from "../types";
 import {
   Column,
   CreateDateColumn,
@@ -19,24 +19,28 @@ export class PhoneLine {
   @Column()
   number: string;
 
-	@Column()
+  @Column()
   country_code: string;
 
-	@Column()
+  @Column()
   provider: LineProviders | string;
 
-	@Column()
+  @Column()
   country_name: string;
 
   @Column()
   link_to_qr: string;
 
-  @Column({default: false})
-  is_active: boolean;
-
   @ManyToOne(() => CompanyClient, { eager: true })
   @JoinColumn({ name: "company_client_id" })
   company_client: CompanyClient;
+
+  @Column({
+    type: "enum",
+    enum: PhoneLineStatus,
+    default: PhoneLineStatus.AVAILABLE,
+  })
+  status: string;
 
   @CreateDateColumn()
   created_at: Date;

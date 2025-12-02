@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PhoneLine = void 0;
+const types_1 = require("../types");
 const typeorm_1 = require("typeorm");
 const company_client_entity_1 = require("./company_client.entity");
 let PhoneLine = class PhoneLine {
@@ -40,14 +41,18 @@ __decorate([
     __metadata("design:type", String)
 ], PhoneLine.prototype, "link_to_qr", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: false }),
-    __metadata("design:type", Boolean)
-], PhoneLine.prototype, "is_active", void 0);
-__decorate([
     (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, { eager: true }),
     (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
     __metadata("design:type", company_client_entity_1.CompanyClient)
 ], PhoneLine.prototype, "company_client", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        type: "enum",
+        enum: types_1.PhoneLineStatus,
+        default: types_1.PhoneLineStatus.AVAILABLE,
+    }),
+    __metadata("design:type", String)
+], PhoneLine.prototype, "status", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
