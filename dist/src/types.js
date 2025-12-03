@@ -1,7 +1,7 @@
 "use strict";
 //User ElliGo
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Modules = exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SupportNetworkStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
+exports.PhoneLineStatus = exports.Modules = exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.Vendors = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SupportNetworkStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
 exports.textNormalizer = textNormalizer;
 var UserRole;
 (function (UserRole) {
@@ -347,4 +347,11 @@ var Modules;
     Modules["CONNECT"] = "Connect";
     Modules["WHATSAPP"] = "Whatsapp";
 })(Modules || (exports.Modules = Modules = {}));
+var PhoneLineStatus;
+(function (PhoneLineStatus) {
+    PhoneLineStatus["AVAILABLE"] = "available";
+    PhoneLineStatus["USED"] = "used";
+    PhoneLineStatus["BROKEN"] = "broken";
+    PhoneLineStatus["DELETED"] = "deleted";
+})(PhoneLineStatus || (exports.PhoneLineStatus = PhoneLineStatus = {}));
 //# sourceMappingURL=types.js.map
