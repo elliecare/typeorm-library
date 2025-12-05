@@ -47,6 +47,12 @@ export class IntegrationModule {
 	client_secret: string;
 
 	@Column({
+		nullable: true,
+		default: "Bearer"
+	})
+	token_scheme: string;
+
+	@Column({
 		type: "jsonb",
 		nullable: true,
 	})

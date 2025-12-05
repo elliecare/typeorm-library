@@ -57,6 +57,13 @@ __decorate([
 ], IntegrationModule.prototype, "client_secret", void 0);
 __decorate([
     (0, typeorm_1.Column)({
+        nullable: true,
+        default: "Bearer"
+    }),
+    __metadata("design:type", String)
+], IntegrationModule.prototype, "token_scheme", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
         type: "jsonb",
         nullable: true,
     }),
