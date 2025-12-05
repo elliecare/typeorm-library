@@ -57,6 +57,13 @@ __decorate([
     __metadata("design:type", String)
 ], EventSubscription.prototype, "client_secret", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+        default: "Bearer"
+    }),
+    __metadata("design:type", String)
+], EventSubscription.prototype, "token_scheme", void 0);
+__decorate([
     (0, typeorm_1.Column)({ name: "is_active", default: true }),
     __metadata("design:type", Boolean)
 ], EventSubscription.prototype, "is_active", void 0);

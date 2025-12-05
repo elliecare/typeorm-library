@@ -48,6 +48,12 @@ export class EventSubscription {
 	@Column({ name: "endpoint_secret", nullable: true })
 	client_secret!: string | null;
 
+	@Column({
+		nullable: true,
+		default: "Bearer"
+	})
+	token_scheme: string;
+
 	// Para activar/desactivar sin borrar
 	@Column({ name: "is_active", default: true })
 	is_active!: boolean;
