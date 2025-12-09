@@ -54,6 +54,20 @@ __decorate([
     __metadata("design:type", String)
 ], PhoneLine.prototype, "status", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+        default: null
+    }),
+    __metadata("design:type", String)
+], PhoneLine.prototype, "pin", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+        default: null
+    }),
+    __metadata("design:type", String)
+], PhoneLine.prototype, "puk", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], PhoneLine.prototype, "created_at", void 0);

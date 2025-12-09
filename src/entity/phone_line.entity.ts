@@ -42,6 +42,18 @@ export class PhoneLine {
   })
   status: string;
 
+  @Column({
+		nullable: true,
+    default: null
+	})
+	pin: string;
+
+  @Column({
+		nullable: true,
+    default: null
+	})
+	puk: string;
+
   @CreateDateColumn()
   created_at: Date;
 
