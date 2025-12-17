@@ -36,6 +36,13 @@ __decorate([
     __metadata("design:type", Number)
 ], Sensors.prototype, "long", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        type: "boolean",
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], Sensors.prototype, "await_location_ondemand", void 0);
+__decorate([
     (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", Date)
 ], Sensors.prototype, "location_updated_at", void 0);

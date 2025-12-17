@@ -56,6 +56,14 @@ export class EventEntity {
 	@Column({ name: "smartwatch_id", nullable:true })
 	smartwatch_id: string;
 
+	@Column({
+		nullable: true,
+	})
+	app_version: string;
+
+	@Column({nullable: true, type: "timestamptz"})
+	sent_by_webhook: Date;
+
 	@CreateDateColumn()
 	created_at: Date;
 }

@@ -57,6 +57,13 @@ __decorate([
 ], ConnectModule.prototype, "client_secret", void 0);
 __decorate([
     (0, typeorm_1.Column)({
+        nullable: true,
+        default: "Bearer"
+    }),
+    __metadata("design:type", String)
+], ConnectModule.prototype, "token_scheme", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
         type: "bigint",
         nullable: true,
     }),

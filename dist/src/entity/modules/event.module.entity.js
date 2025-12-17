@@ -9,93 +9,128 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IntegrationModule = void 0;
+exports.EventModule = void 0;
 const typeorm_1 = require("typeorm");
 const company_client_entity_1 = require("../company_client.entity");
-let IntegrationModule = class IntegrationModule {
+let EventModule = class EventModule {
 };
-exports.IntegrationModule = IntegrationModule;
+exports.EventModule = EventModule;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)("uuid"),
     __metadata("design:type", String)
-], IntegrationModule.prototype, "id", void 0);
+], EventModule.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.ManyToOne)(() => company_client_entity_1.CompanyClient, client => client.id),
     (0, typeorm_1.JoinColumn)({ name: "company_client_id" }),
     __metadata("design:type", company_client_entity_1.CompanyClient)
-], IntegrationModule.prototype, "company_client", void 0);
+], EventModule.prototype, "company_client", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: Boolean,
         default: false,
     }),
     __metadata("design:type", Boolean)
-], IntegrationModule.prototype, "enabled", void 0);
+], EventModule.prototype, "enabled", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
     }),
     __metadata("design:type", String)
-], IntegrationModule.prototype, "send_url", void 0);
+], EventModule.prototype, "send_url", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
     }),
     __metadata("design:type", String)
-], IntegrationModule.prototype, "auth_url", void 0);
+], EventModule.prototype, "auth_url", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
     }),
     __metadata("design:type", String)
-], IntegrationModule.prototype, "client_id", void 0);
+], EventModule.prototype, "client_id", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         nullable: true,
     }),
     __metadata("design:type", String)
-], IntegrationModule.prototype, "client_secret", void 0);
+], EventModule.prototype, "client_secret", void 0);
 __decorate([
     (0, typeorm_1.Column)({
-        nullable: true,
-        default: "Bearer"
+        default: false,
     }),
-    __metadata("design:type", String)
-], IntegrationModule.prototype, "token_scheme", void 0);
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "OFF_BODY", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "STEPS", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "LOW_BATTERY", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "WIFI_CONNECTED", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "BATTERY_CHARGING", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "LOCATION", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "HR_ABOVE_BASELINE", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        default: false,
+    }),
+    __metadata("design:type", Boolean)
+], EventModule.prototype, "HR_BELOW_BASELINE", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "jsonb",
         nullable: true,
     }),
     __metadata("design:type", Object)
-], IntegrationModule.prototype, "phone_number", void 0);
-__decorate([
-    (0, typeorm_1.Column)({
-        type: "jsonb",
-        nullable: true,
-    }),
-    __metadata("design:type", Object)
-], IntegrationModule.prototype, "support_contacts", void 0);
+], EventModule.prototype, "support_contacts", void 0);
 __decorate([
     (0, typeorm_1.Column)({
         type: "int",
         nullable: true,
+        default: 3,
     }),
     __metadata("design:type", Number)
-], IntegrationModule.prototype, "maximum_redial", void 0);
+], EventModule.prototype, "maximum_redial", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], IntegrationModule.prototype, "created_at", void 0);
+], EventModule.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
-], IntegrationModule.prototype, "updated_at", void 0);
+], EventModule.prototype, "updated_at", void 0);
 __decorate([
     (0, typeorm_1.DeleteDateColumn)(),
     __metadata("design:type", Date)
-], IntegrationModule.prototype, "deleted_at", void 0);
-exports.IntegrationModule = IntegrationModule = __decorate([
+], EventModule.prototype, "deleted_at", void 0);
+exports.EventModule = EventModule = __decorate([
     (0, typeorm_1.Entity)()
-], IntegrationModule);
-//# sourceMappingURL=integration.module.entity.js.map
+], EventModule);
+//# sourceMappingURL=event.module.entity.js.map

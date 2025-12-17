@@ -8,6 +8,7 @@ import {
 	OneToOne,
 	JoinColumn,
 	CreateDateColumn,
+	OneToMany,
 } from "typeorm";
 import { WhatsappModule } from "./modules/whatsapp.module.entity";
 import { ConnectModule } from "./modules/connect.module.entity";
@@ -17,6 +18,7 @@ import { SmartwatchModule } from "./modules/smartwatch.module.entity";
 import { CanaryModule } from "./modules/canary.module.entity";
 import { IntegrationModule } from "./modules/integration.module.entity";
 import { Config } from "./config.entity";
+import { EventSubscription } from "./event-subscription.entity";
 
 @Entity()
 export class CompanyClient {
@@ -72,6 +74,9 @@ export class CompanyClient {
 	@OneToOne(() => Config, { eager: true })
 	@JoinColumn({ name: "config_id" })
 	config: Config;
+
+	@OneToMany(() => EventSubscription, (sub) => sub.company_client)
+	eventSubscriptions!: EventSubscription[];
 
 	@CreateDateColumn()
 	created_at: Date;

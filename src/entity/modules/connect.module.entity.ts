@@ -47,6 +47,12 @@ export class ConnectModule {
 	client_secret: string;
 
 	@Column({
+		nullable: true,
+		default: "Bearer"
+	})
+	token_scheme: string;
+
+	@Column({
 		type: "bigint",
 		nullable: true,
 	})

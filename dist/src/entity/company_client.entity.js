@@ -20,6 +20,7 @@ const smartwatch_module_entity_1 = require("./modules/smartwatch.module.entity")
 const canary_module_entity_1 = require("./modules/canary.module.entity");
 const integration_module_entity_1 = require("./modules/integration.module.entity");
 const config_entity_1 = require("./config.entity");
+const event_subscription_entity_1 = require("./event-subscription.entity");
 let CompanyClient = class CompanyClient {
 };
 exports.CompanyClient = CompanyClient;
@@ -89,6 +90,10 @@ __decorate([
     (0, typeorm_1.JoinColumn)({ name: "config_id" }),
     __metadata("design:type", config_entity_1.Config)
 ], CompanyClient.prototype, "config", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => event_subscription_entity_1.EventSubscription, (sub) => sub.company_client),
+    __metadata("design:type", Array)
+], CompanyClient.prototype, "eventSubscriptions", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)

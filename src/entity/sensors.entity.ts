@@ -27,6 +27,12 @@ export class Sensors {
 	})
 	long: number;
 
+	@Column({
+		type: "boolean",
+		default: false,
+	})
+	await_location_ondemand: boolean;
+
 	@Column({nullable:true})
 	location_updated_at: Date;
 

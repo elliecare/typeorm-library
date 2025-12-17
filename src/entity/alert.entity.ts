@@ -126,6 +126,11 @@ export class Alert {
 	@UpdateDateColumn()
 	updated_at: Date;
 
+	@Column({
+		nullable: true,
+	})
+	app_version: string;
+
 	getformattedAlertByCC():{} {
 		const {id,created_at,type,event:{measurements:{location},smartwatch},user} = this;
 		console.log('this', this)
