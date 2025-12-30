@@ -15,13 +15,13 @@ export enum SupportNetworkUserType {
 }
 
 export enum PlanType {
-  FREE = "free",
-  BASIC = "basic",
-  GOLD = "gold",
-  GOLD_LOAN = "gold_loan",
-  YOUNG = "young",
-  YOUNGLOAN = "young_loan",
-  COMPANY_CLIENT = "company_client",
+	FREE = "free",
+	BASIC = "basic",
+	GOLD = "gold",
+	GOLD_LOAN = "gold_loan",
+	YOUNG = "young",
+	YOUNG_LOAN = "young_loan",
+	COMPANY_CLIENT = "company_client",
 }
 
 export enum SupportNetworkStatus {
@@ -145,6 +145,7 @@ export enum EventType {
   FALL = "fall",
   PROBABLE_FALL = "probable_fall",
   LONG_BUTTON_PRESS = "long_button_press",
+	LONG_BUTTON_PRESS_SILENT_MODE = "long_button_press_silent_mode",
   NOTIFICATION_BUTTON_PRESS = "notification_button_press",
   BUTTON_PRESS = "button_press",
   REMOTE_BUTTON_PRESS = "remote_button_press",
