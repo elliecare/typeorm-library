@@ -22,6 +22,8 @@ var PlanType;
     PlanType["BASIC"] = "basic";
     PlanType["GOLD"] = "gold";
     PlanType["GOLD_LOAN"] = "gold_loan";
+    PlanType["YOUNG"] = "young";
+    PlanType["YOUNG_LOAN"] = "young_loan";
     PlanType["COMPANY_CLIENT"] = "company_client";
 })(PlanType || (exports.PlanType = PlanType = {}));
 var SupportNetworkStatus;
@@ -110,6 +112,7 @@ var EventType;
     EventType["FALL"] = "fall";
     EventType["PROBABLE_FALL"] = "probable_fall";
     EventType["LONG_BUTTON_PRESS"] = "long_button_press";
+    EventType["LONG_BUTTON_PRESS_SILENT_MODE"] = "long_button_press_silent_mode";
     EventType["NOTIFICATION_BUTTON_PRESS"] = "notification_button_press";
     EventType["BUTTON_PRESS"] = "button_press";
     EventType["REMOTE_BUTTON_PRESS"] = "remote_button_press";
@@ -336,6 +339,8 @@ var SubscriptionType;
 (function (SubscriptionType) {
     SubscriptionType["GOLD"] = "gold";
     SubscriptionType["GOLDLOAN"] = "gold_loan";
+    SubscriptionType["YOUNG"] = "young";
+    SubscriptionType["YOUNGLOAN"] = "young_loan";
 })(SubscriptionType || (exports.SubscriptionType = SubscriptionType = {}));
 var DiscountCodeType;
 (function (DiscountCodeType) {
