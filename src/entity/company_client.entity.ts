@@ -43,6 +43,16 @@ export class CompanyClient {
 	@Column({default:Language.EN})
 	language: Language;
 
+	@Column({
+		nullable: true,
+	})
+	country: string;
+
+	@Column({
+		nullable: true,
+	})
+	email: string;
+
 	@OneToOne(() => ConnectModule, { eager: true, nullable: true })
 	@JoinColumn()
 	connectModule?: ConnectModule;
