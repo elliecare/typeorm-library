@@ -19,6 +19,8 @@ export enum PlanType {
   BASIC = "basic",
   GOLD = "gold",
   GOLD_LOAN = "gold_loan",
+  YOUNG = "young",
+  YOUNGLOAN = "young_loan",
   COMPANY_CLIENT = "company_client",
 }
 
@@ -512,6 +514,8 @@ export enum FrequencyType {
 export enum SubscriptionType {
   GOLD = "gold",
   GOLDLOAN = "gold_loan",
+  YOUNG = "young",
+  YOUNGLOAN = "young_loan",
 }
 
 export enum DiscountCodeType {
