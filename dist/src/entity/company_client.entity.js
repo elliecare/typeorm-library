@@ -51,6 +51,18 @@ __decorate([
     __metadata("design:type", String)
 ], CompanyClient.prototype, "language", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", String)
+], CompanyClient.prototype, "country", void 0);
+__decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+    }),
+    __metadata("design:type", String)
+], CompanyClient.prototype, "email", void 0);
+__decorate([
     (0, typeorm_1.OneToOne)(() => connect_module_entity_1.ConnectModule, { eager: true, nullable: true }),
     (0, typeorm_1.JoinColumn)(),
     __metadata("design:type", connect_module_entity_1.ConnectModule)
