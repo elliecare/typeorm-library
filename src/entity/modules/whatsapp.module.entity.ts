@@ -47,6 +47,12 @@ export class WhatsappModule {
 	@JoinColumn({ name: "company_client_id" })
 	company_client: CompanyClient;
 
+	@Column({
+		nullable: true,
+		default: "es_AR",
+	})
+	template_language: string;
+
 	@CreateDateColumn()
 	created_at: Date;
 

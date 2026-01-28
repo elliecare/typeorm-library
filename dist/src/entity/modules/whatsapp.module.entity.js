@@ -57,6 +57,13 @@ __decorate([
     __metadata("design:type", company_client_entity_1.CompanyClient)
 ], WhatsappModule.prototype, "company_client", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        nullable: true,
+        default: "es_AR",
+    }),
+    __metadata("design:type", String)
+], WhatsappModule.prototype, "template_language", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], WhatsappModule.prototype, "created_at", void 0);
