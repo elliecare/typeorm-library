@@ -41,7 +41,7 @@ __decorate([
     __metadata("design:type", gateway_entity_1.Gateway)
 ], Plans.prototype, "gateway", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ default: types_1.Vendors.ELLIE_CARE }),
     __metadata("design:type", String)
 ], Plans.prototype, "vendor", void 0);
 __decorate([

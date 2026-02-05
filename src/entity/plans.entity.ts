@@ -32,7 +32,7 @@ export class Plans {
 	@JoinColumn({ name: "gateway_id" })
 	gateway: Gateway;
 
-	@Column()
+	@Column({ default: Vendors.ELLIE_CARE })
 	vendor: string;
 
 	@Column({
