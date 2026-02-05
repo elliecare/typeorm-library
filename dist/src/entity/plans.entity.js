@@ -41,10 +41,7 @@ __decorate([
     __metadata("design:type", gateway_entity_1.Gateway)
 ], Plans.prototype, "gateway", void 0);
 __decorate([
-    (0, typeorm_1.Column)({
-        type: "enum",
-        enum: types_1.Vendors,
-    }),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Plans.prototype, "vendor", void 0);
 __decorate([

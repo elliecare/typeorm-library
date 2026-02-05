@@ -411,12 +411,6 @@ export enum EllieCenterUserShift {
   NIGHT = "night",
 }
 
-export enum Vendors {
-  ELLIE_CARE = "Ellie Care",
-  MATER_DEI = "Mater Dei",
-  ORTOPEDIA_ALEMANA = "Ortopedia Alemana",
-}
-
 // User Pourchase
 
 export interface RawUserPurchase {

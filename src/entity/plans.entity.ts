@@ -9,7 +9,7 @@ import {
 	UpdateDateColumn,
 } from "typeorm";
 import { CompanyClient } from "./company_client.entity";
-import { PlanType, SubscriptionType, Vendors } from "../types";
+import { PlanType, SubscriptionType } from "../types";
 import { Gateway } from "./gateway.entity";
 import { PlansDescription } from "./plans_description.entity";
 
@@ -32,10 +32,7 @@ export class Plans {
 	@JoinColumn({ name: "gateway_id" })
 	gateway: Gateway;
 
-	@Column({
-		type: "enum",
-		enum: Vendors,
-	})
+	@Column()
 	vendor: string;
 
 	@Column({
