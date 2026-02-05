@@ -73,6 +73,12 @@ export class Config {
 	})
 	timeout_cancel_display: number;
 
+	@Column({ default: 1000 })
+	steps_value_min: number;
+
+	@Column({ default: 1000 })
+	calories_value_min: number;
+
 	@CreateDateColumn()
 	created_at: Date;
 

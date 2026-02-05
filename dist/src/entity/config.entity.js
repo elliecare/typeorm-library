@@ -127,6 +127,14 @@ __decorate([
     __metadata("design:type", Number)
 ], Config.prototype, "timeout_cancel_display", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ default: 1000 }),
+    __metadata("design:type", Number)
+], Config.prototype, "steps_value_min", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ default: 1000 }),
+    __metadata("design:type", Number)
+], Config.prototype, "calories_value_min", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], Config.prototype, "created_at", void 0);
