@@ -33,7 +33,7 @@ export class Plans {
 	gateway: Gateway;
 
 	@Column()
-	vendor: string | Vendors;
+	vendor: string;
 
 	@Column({
 		type: "enum",
