@@ -1,7 +1,7 @@
 "use strict";
 //User ElliGo
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PhoneLineStatus = exports.Modules = exports.Language = exports.DiscountCodeType = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SupportNetworkStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
+exports.PhoneLineStatus = exports.Modules = exports.Language = exports.DiscountCodeType = exports.Vendors = exports.SubscriptionType = exports.FrequencyType = exports.EventsNotificationType = exports.NotificationType = exports.EllieCenterUserShift = exports.Payment = exports.BloodType = exports.ActivityStatus = exports.OperationalRole = exports.User = exports.GenderType = exports.MeasurementType = exports.MeasurementGetBy = exports.AlertStatus = exports.EventOriginType = exports.EventType = exports.TrackingStatus = exports.LineProviders = exports.SmartwatchColors = exports.SmartwatchSizes = exports.SmartwatchModels = exports.SmartwatchMarks = exports.SmartwatchStatus = exports.DeviceStatus = exports.DeviceType = exports.SupportNetworkStatus = exports.PlanType = exports.SupportNetworkUserType = exports.UserRole = void 0;
 exports.textNormalizer = textNormalizer;
 var UserRole;
 (function (UserRole) {
@@ -336,6 +336,12 @@ var SubscriptionType;
     SubscriptionType["YOUNG"] = "young";
     SubscriptionType["YOUNGLOAN"] = "young_loan";
 })(SubscriptionType || (exports.SubscriptionType = SubscriptionType = {}));
+var Vendors;
+(function (Vendors) {
+    Vendors["ELLIE_CARE"] = "Ellie Care";
+    Vendors["MATER_DEI"] = "Mater Dei";
+    Vendors["ORTOPEDIA_ALEMANA"] = "Ortopedia Alemana";
+})(Vendors || (exports.Vendors = Vendors = {}));
 var DiscountCodeType;
 (function (DiscountCodeType) {
     DiscountCodeType["PERCENTAGE"] = "percentage";
