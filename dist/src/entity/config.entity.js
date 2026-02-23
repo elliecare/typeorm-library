@@ -40,6 +40,8 @@ let Config = class Config {
             steps_sending_interval: input.steps_sending_interval,
             measurements_sending_interval: input.measurements_sending_interval,
             location_service_update_interval: input.location_service_update_interval,
+            steps_value_min: input.steps_value_min,
+            calories_value_min: input.calories_value_min,
         };
         for (const key in _data) {
             if (_data[key] === undefined || _data[key] === null)
@@ -127,11 +129,11 @@ __decorate([
     __metadata("design:type", Number)
 ], Config.prototype, "timeout_cancel_display", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: 1000 }),
+    (0, typeorm_1.Column)({ default: 10000 }),
     __metadata("design:type", Number)
 ], Config.prototype, "steps_value_min", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: 1000 }),
+    (0, typeorm_1.Column)({ default: 10000 }),
     __metadata("design:type", Number)
 ], Config.prototype, "calories_value_min", void 0);
 __decorate([

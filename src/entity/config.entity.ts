@@ -73,10 +73,10 @@ export class Config {
 	})
 	timeout_cancel_display: number;
 
-	@Column({ default: 1000 })
+	@Column({ default: 10000 })
 	steps_value_min: number;
 
-	@Column({ default: 1000 })
+	@Column({ default: 10000 })
 	calories_value_min: number;
 
 	@CreateDateColumn()
@@ -119,6 +119,8 @@ export class Config {
 			steps_sending_interval: input.steps_sending_interval,
 			measurements_sending_interval: input.measurements_sending_interval,
 			location_service_update_interval: input.location_service_update_interval,
+			steps_value_min: input.steps_value_min,
+			calories_value_min: input.calories_value_min,
 		};
 
 		for (const key in _data) {
