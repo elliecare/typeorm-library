@@ -33,6 +33,12 @@ export class CanaryData {
 	})
 	behavioral_screening: any;
 
+	@Column({
+		type: "jsonb",
+		nullable: true,
+	})
+	alzheimer: any;
+
 	@CreateDateColumn()
 	created_at: Date;
 

@@ -44,6 +44,13 @@ __decorate([
     __metadata("design:type", Object)
 ], CanaryData.prototype, "behavioral_screening", void 0);
 __decorate([
+    (0, typeorm_1.Column)({
+        type: "jsonb",
+        nullable: true,
+    }),
+    __metadata("design:type", Object)
+], CanaryData.prototype, "alzheimer", void 0);
+__decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
 ], CanaryData.prototype, "created_at", void 0);
