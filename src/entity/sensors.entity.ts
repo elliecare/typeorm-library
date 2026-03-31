@@ -79,6 +79,12 @@ export class Sensors {
 	@Column({nullable:true})
 	steps_updated_at: Date;
 
+	@Column({nullable:true})
+	calories: number;
+
+	@Column({nullable:true})
+	calories_updated_at: Date;
+
 	@Column({nullable:true,type:"simple-array"})
 	heart_rate: number[];
 

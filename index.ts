@@ -1,4 +1,5 @@
 import { Plans } from "./src/entity/plans.entity";
+import { Calories } from "./src/entity/calories.entity";
 import { Steps } from "./src/entity/steps.entity";
 import { PatientAgentContact } from "./src/entity/patient_agent_contact.entity";
 import { Plans_audit } from "./src/entity/plans_audit.entity";
@@ -96,6 +97,7 @@ export const Entities = [
   WifiConnected,
   PhoneLine,
   PasswordResetToken,
+  Calories,
   Steps,
   Alert_audit,
   CompanyClient,
@@ -190,6 +192,7 @@ export { CompanyClient };
 export { Steps };
 export { PasswordResetToken };
 export { PhoneLine };
+export { Calories };
 export { WifiConnected };
 export { Sensors_audit };
 export { StaticToken };
